@@ -1,0 +1,102 @@
+baseURL = "https://blog.dgrid.ai"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "DGrid AI"
+theme = "dream"
+
+enableGitInfo = true
+enableRobotsTXT = true
+
+hasCJKLanguage = true
+
+# [services]
+# [services.disqus]
+# shortname = ""
+# [services.googleAnalytics]
+# ID = ""
+
+[markup]
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+[markup.goldmark.parser.attribute]
+block = true
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]
+[markup.highlight]
+noClasses = false
+
+# [taxonomies]
+# category = "categories"
+# tag = "tags"
+# series = "series"
+
+[params]
+# zenMode = true
+
+lightTheme = "emerald"
+darkTheme = "forest"
+
+# backgroundImage = "img/global-background.jpg"
+# backgroundImageDark = ""
+
+images = ["img/global-background.jpg"]
+
+author = "DGrid AI"
+description = "The decentralized smart network of AI. For Open, Low-Cost, Community-Powered AI"
+avatar = "img/personal/avatar.png"
+headerTitle = "DGrid AI"
+motto = " The decentralized smart network of AI. For Open, Low-Cost, Community-Powered AI"
+
+footerBottomText = " "
+
+rss = true
+
+# utterancesRepo = "dgridai/dgridai.github.io"
+
+# valine = true
+# LEANCLOUD_APP_ID = ""
+# LEANCLOUD_APP_KEY = ""
+
+# waline = true
+# walineServer = ""
+
+email = "hi@dgrid.ai"
+
+siteStartYear = 2025
+
+favicon = '<link rel="icon" href="/img/dgrid.png"></link>'
+
+# Syntax highlighting
+customSyntaxHighlighting = true
+
+# options
+stickyNav = true
+reorderNavItems = ["search", "github", "posts", "categories", "tags", "rss"]
+collapseNavItems = ["posts", "categories", "tags", "rss"]
+# noDefaultSummaryCover = true
+showTableOfContents = true
+showSummaryCoverInPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
+reorderShares = ["x"]
+
+# https://gohugo.io/templates/embedded/#configure-x-twitter-cards
+[params.social]
+twitter = "dgrid_ai"
+
+[params.navItems]
+github = { href = "https://github.com/dgridOP/dgrid-blog", target = "_blank", icon = "logo-github", title = "GitHub" }
+
+[params.advanced]
+customCSS = ["css/custom.css"]
+# customJS = []
+
+[params.experimental]
+jsDate = true
+jsDateFormat = "yyyy-MM-dd"
+# jsDateFormat = "yyyy-MM-dd,cccc"

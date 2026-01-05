@@ -1,6 +1,6 @@
 ---
 title: 'From Chaos to Unity: DGrid’s New Tools Simplify LLM Discovery, Testing & Integration'
-date: 2026-01-04T14:31:45+08:00
+date: 2025-12-26T14:31:45+08:00
 author: DGrid AI
 cover: 1_YtoJftokKZgEpw6E2STK0w.webp
 images:
@@ -117,11 +117,11 @@ Combined, **Dori Find Models** and the **LLM Marketplace** reshape the end-to-en
 
 ### Traditional LLM Workflow
 
-![](0_T1QsJC0Fwp6SUzWW.webp)
+[](0_T1QsJC0Fwp6SUzWW.webp)
 
 ### DGrid Workflow
 
-![](0_LHhTG3KodzMKlBfr.webp)
+[](0_LHhTG3KodzMKlBfr.webp)
 
 The result is a **cohesive, end-to-end flow** instead of a chain of disconnected tools and platforms.
 

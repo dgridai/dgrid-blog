@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 0_epCi3kSKCV2Y0Z_q.webp
 images:
   - 0_epCi3kSKCV2Y0Z_q.webp
-description: This tutorial explains how to configure your DGrid service API Key in popular AI front‑end tools so that you can call DGrid’s AI model services directly inside these products.
+description: "This tutorial explains how to configure your DGrid service API Key in popular AI front‑end tools so that you can call DGrid’s AI model services directly inside these products."
 categories:
   - AI
   - LLM

@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_zScLplO3f6Gb8MNrddJOTQ.webp
 images:
   - 1_zScLplO3f6Gb8MNrddJOTQ.webp
-description: “The rise of AI-generated video and creative content demands one thing above all: massive, scalable, verifiable compute. StarAI — one of the fastest-growing Web3 AI creation platforms with 10M+ users across MiniApps and an expanding Dapp ecosystem — is pushing the boundaries of how creators produce and monetize AI content.”
+description: "The rise of AI-generated video and creative content demands one thing above all: massive, scalable, verifiable compute. StarAI — one of the fastest-growing Web3 AI creation platforms with 10M+ users across MiniApps and an expanding Dapp ecosystem — is pushing the boundaries of how creators produce and monetize AI content."
 categories:
   - AI
   - LLM

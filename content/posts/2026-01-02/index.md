@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_uZQsPXgwvSJvQLz4YEqXQA.webp
 images:
   - 1_uZQsPXgwvSJvQLz4YEqXQA.webp
-description: The convergence of Artificial Intelligence and Web3 is no longer a theoretical narrative — it is a live, rapidly expanding economy. As we enter 2026, the window to move from passive observer to foundational stakeholder is opening.
+description: "The convergence of Artificial Intelligence and Web3 is no longer a theoretical narrative — it is a live, rapidly expanding economy. As we enter 2026, the window to move from passive observer to foundational stakeholder is opening."
 categories:
   - AI
   - LLM

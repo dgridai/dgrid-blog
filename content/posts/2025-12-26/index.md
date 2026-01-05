@@ -3,7 +3,7 @@ title: 'From Chaos to Unity: DGrid’s New Tools Simplify LLM Discovery, Testing
 date: 2025-12-26T14:31:45+08:00
 author: DGrid AI
 cover: 1_YtoJftokKZgEpw6E2STK0w.webp
-description: “As DGrid, we have spent the past time listening to a simple but persistent complaint from builders everywhere: It shouldn’t be this hard just to find, test, and integrate ​the right LLM.”
+description: "As DGrid, we have spent the past time listening to a simple but persistent complaint from builders everywhere: It shouldn’t be this hard just to find, test, and integrate ​the right LLM."
 images:
   - 1_YtoJftokKZgEpw6E2STK0w.webp
 categories:

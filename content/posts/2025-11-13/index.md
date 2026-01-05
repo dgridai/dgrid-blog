@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_oKeuSN6P75dL_VmBPHPWTA.webp
 images:
   - 1_oKeuSN6P75dL_VmBPHPWTA.webp
-description: “Decentralized AI is more than a buzzword — it’s about building systems that are ​trustless, resilient, and community-driven​. DecentralGPT has already laid the groundwork as the world’s first decentralized LLM inference network. With DGrid’s modular architecture, each model inference now benefits from ​optimized computation, verifiable outputs, and seamless coordination across distributed GPU nodes.”
+description: "Decentralized AI is more than a buzzword — it’s about building systems that are ​trustless, resilient, and community-driven​. DecentralGPT has already laid the groundwork as the world’s first decentralized LLM inference network. With DGrid’s modular architecture, each model inference now benefits from ​optimized computation, verifiable outputs, and seamless coordination across distributed GPU nodes."
 categories:
   - AI
   - LLM

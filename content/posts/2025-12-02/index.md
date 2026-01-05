@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_FVHHmw3GJhArcIyN6YvGHQ.webp
 images:
   - 1_FVHHmw3GJhArcIyN6YvGHQ.webp
-description: “We’re excited to collaborate with ​CyberCharge​, the world’s first smart-charging DePIN device and one of the most compelling hardware gateways driving Web3 adoption at scale. As CyberCharge expands its hardware network and user reach, we see a powerful opportunity to contribute a complementary layer: decentralized, verifiable AI that supports richer interactions, smarter logic, and scalable trust.”
+description: "We’re excited to collaborate with ​CyberCharge​, the world’s first smart-charging DePIN device and one of the most compelling hardware gateways driving Web3 adoption at scale. As CyberCharge expands its hardware network and user reach, we see a powerful opportunity to contribute a complementary layer: decentralized, verifiable AI that supports richer interactions, smarter logic, and scalable trust."
 categories:
   - AI
   - LLM

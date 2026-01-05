@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_sGhWTuatv0h57SBWlvqVcQ.webp
 images:
   - 1_sGhWTuatv0h57SBWlvqVcQ.webp
-description: “Decentralized AI isn’t just a buzzword — it’s about ​building systems that are trustless, resilient, and scalable​. With 4EVERLAND’s robust decentralized storage and AI RPC services, and DGrid’s modular architecture, we’re enabling high-performance LLM workloads across distributed networks while ensuring ​verifiable outputs and seamless coordination​.”
+description: "Decentralized AI isn’t just a buzzword — it’s about ​building systems that are trustless, resilient, and scalable​. With 4EVERLAND’s robust decentralized storage and AI RPC services, and DGrid’s modular architecture, we’re enabling high-performance LLM workloads across distributed networks while ensuring ​verifiable outputs and seamless coordination​."
 categories:
   - AI
   - LLM

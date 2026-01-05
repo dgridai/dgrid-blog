@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_Vnnrsep0LODa5497ur1eJg.webp
 images:
   - 1_Vnnrsep0LODa5497ur1eJg.webp
-description: “We are pleased to announce a new strategic collaboration with ​Conflux Network​, one of the world’s most advanced and regulatory-compliant Layer 1 blockchains. As the only public blockchain endorsed for large-scale deployments in Asia — and a trusted partner of Shanghai, China Telecom, Little Red Book, McDonald’s China, and Oreo — Conflux brings unparalleled regional access, scalability, and institutional alignment.”
+description: "We are pleased to announce a new strategic collaboration with ​Conflux Network​, one of the world’s most advanced and regulatory-compliant Layer 1 blockchains. As the only public blockchain endorsed for large-scale deployments in Asia — and a trusted partner of Shanghai, China Telecom, Little Red Book, McDonald’s China, and Oreo — Conflux brings unparalleled regional access, scalability, and institutional alignment."
 categories:
   - AI
   - LLM

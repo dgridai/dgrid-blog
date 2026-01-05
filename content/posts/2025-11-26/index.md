@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_uAesRLPvA-68-lLg-910MQ.webp
 images:
   - 1_uAesRLPvA-68-lLg-910MQ.webp
-description: “The release of Gemini 3 Pro highlights the incredible pace of AI development. With larger context windows, improved reasoning, and multimodal capabilities, it demonstrates what cutting-edge models can achieve today. Yet, despite its sophistication, Gemini remains centralized — users depend entirely on the provider, with no transparency, limited flexibility, and zero guarantee that outputs are consistent or verifiable.”
+description: "The release of Gemini 3 Pro highlights the incredible pace of AI development. With larger context windows, improved reasoning, and multimodal capabilities, it demonstrates what cutting-edge models can achieve today. Yet, despite its sophistication, Gemini remains centralized — users depend entirely on the provider, with no transparency, limited flexibility, and zero guarantee that outputs are consistent or verifiable."
 categories:
   - AI
   - LLM

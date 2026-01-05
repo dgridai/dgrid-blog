@@ -5,7 +5,7 @@ author: DGrid AI
 cover: 1_La58lo3-4dPXn8F-swNaLA.webp
 images:
   - 1_La58lo3-4dPXn8F-swNaLA.webp
-description: “We’re excited to collaborate with Unibase, a leading decentralized AI memory layer powering autonomous agents with long-term memory and cross-platform interoperability.”
+description: "We’re excited to collaborate with Unibase, a leading decentralized AI memory layer powering autonomous agents with long-term memory and cross-platform interoperability."
 categories:
   - AI
   - LLM

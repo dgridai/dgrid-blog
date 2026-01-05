@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_9NOw7Sfxgep2Skx92jlo9g.webp
 images:
   - 1_9NOw7Sfxgep2Skx92jlo9g.webp
+description: DGrid is partnering with TradeTalent to support AI-driven skill verification and talent matching in real hiring workflows. As enterprises increasingly rely on AI to screen candidates and match roles, two requirements become unavoidable: results need to be reliable, and the process needs to be explainable. This collaboration focuses on addressing both.
 categories:
   - AI
   - LLM

@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 0_qi0NHBcQGCKlBmmF.webp
 images:
   - 0_qi0NHBcQGCKlBmmF.webp
+description: As decentralized AI infrastructure continues to evolve, the core bottlenecks are no longer limited to raw compute supply. Instead, critical challenges have shifted to three fundamental dimensions within heterogeneous node networks: the efficiency of task routing, the reliability of service verification, and the fairness of value distribution.
 categories:
   - AI
   - LLM

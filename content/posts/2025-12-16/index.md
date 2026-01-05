@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_uq3HxBXD43xxurrvMyqPMQ.webp
 images:
   - 1_uq3HxBXD43xxurrvMyqPMQ.webp
+description: “We’re collaborating with LinkLayerAI, an incentive protocol built around trading data and social intelligence. This collaboration starts from a simple belief: as AI agents become native actors in Web3 markets, how intelligence is executed matters as much as the intelligence itself.”
 categories:
   - AI
   - LLM

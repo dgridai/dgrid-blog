@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_l3Nbsww45N7ECjWJjRSS4A.webp
 images:
   - 1_l3Nbsww45N7ECjWJjRSS4A.webp
+description: “We’re excited to announce a new partnership between ​DGrid​, the decentralized AI inference network for Web3, and ​Tagger​, the leading decentralized AI data labeling, processing, management, and trading platform.”
 categories:
   - AI
   - LLM

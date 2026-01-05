@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_Tx21aSxWn4qUSAo4XIHI3w.webp
 images:
   - 1_Tx21aSxWn4qUSAo4XIHI3w.webp
+description: “Picture this: You’re mid-development on a Web3 tool that uses LLMs to analyze smart contracts — suddenly, the API goes down. Or you’re a small team building a DeFi assistant, only to hit a surprise limit on your AI service calls. Or maybe you open a bill for LLM inference and realize it’s eating up half your project budget.”
 categories:
   - AI
   - LLM

@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 0_FTpzHckzDpShOk6S.webp
 images:
   - 0_FTpzHckzDpShOk6S.webp
+description: The Web3 ecosystem thrives on community wisdom — and today, we’re putting that power front and center. To power this next chapter, DGrid AI is proud to officially live on Galxe Starboard, unlocking a $100,000 reward pool (featuring $DGAI and $USDT) to celebrate and reward the most visionary, insightful voices in our community.
 categories:
   - AI
   - LLM

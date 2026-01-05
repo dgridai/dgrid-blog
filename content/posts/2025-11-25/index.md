@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_hmoUqcDGkqxjXSF38jv94g.webp
 images:
   - 1_hmoUqcDGkqxjXSF38jv94g.webp
+description: “Bitcoin is entering a new phase. As Lightning, Ordinals, BRC tokens, Runes, and emerging rollups reshape what can be built on BTC, one challenge remains constant: ​*liquidity*​. Lava is addressing this head-on with Proof of Liquidity — a unifying layer that connects fragmented Bitcoin ecosystems and enables capital to finally flow freely.”
 categories:
   - AI
   - LLM

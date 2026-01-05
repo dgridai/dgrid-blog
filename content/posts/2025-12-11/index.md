@@ -5,6 +5,7 @@ author: DGrid AI
 cover: 1_dP5e27AWPEDi10XyfrmF4w.webp
 images:
   - 1_dP5e27AWPEDi10XyfrmF4w.webp
+description: “We’re excited to announce our collaboration with BAS, the identity and reputation backbone of the BNB Chain ecosystem. BAS is setting the standard for verifiable identity through BNB Passport, real-world attestations, and a unified trust framework that connects users across Web3 and we’re honored to support that vision.”
 categories:
   - AI
   - LLM

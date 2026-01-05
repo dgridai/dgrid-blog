@@ -2,9 +2,9 @@
 title: 'DGrid Genesis Premium: Your Founding Stake in the Web3 + AI Economy'
 date: 2026-01-02T09:30:00+08:00
 author: DGrid AI
-cover: 1_9NOw7Sfxgep2Skx92jlo9g.webp
+cover: 1_uZQsPXgwvSJvQLz4YEqXQA.webp
 images:
-  - 1_9NOw7Sfxgep2Skx92jlo9g.webp
+  - 1_uZQsPXgwvSJvQLz4YEqXQA.webp
 categories:
   - AI
   - LLM

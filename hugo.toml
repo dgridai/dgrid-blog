@@ -9,11 +9,11 @@ enableRobotsTXT = true
 
 hasCJKLanguage = true
 
-# [services]
+[services]
 # [services.disqus]
 # shortname = ""
-# [services.googleAnalytics]
-# ID = ""
+[services.googleAnalytics]
+ID = "G-8DTXYKTTYP"
 
 [markup]
 [markup.goldmark.parser]

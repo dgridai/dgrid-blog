@@ -9,11 +9,11 @@ enableRobotsTXT = true
 
 hasCJKLanguage = true
 
-# [services]
+[services]
 # [services.disqus]
 # shortname = ""
-# [services.googleAnalytics]
-# ID = ""
+[services.googleAnalytics]
+ID = "G-8DTXYKTTYP"
 
 [markup]
 [markup.goldmark.parser]
@@ -76,7 +76,7 @@ customSyntaxHighlighting = true
 
 # options
 stickyNav = true
-reorderNavItems = ["search", "github", "posts", "categories", "tags", "rss"]
+reorderNavItems = ["search", "x", "telegram", "medium", "github",  "email", "posts", "categories", "tags", "rss"]
 collapseNavItems = ["posts", "categories", "tags", "rss"]
 # noDefaultSummaryCover = true
 showTableOfContents = true
@@ -90,7 +90,11 @@ reorderShares = ["x"]
 twitter = "dgrid_ai"
 
 [params.navItems]
+x = { href = "https://x.com/dgrid_ai", target = "_blank", icon = "logo-x", title = "X" }
+telegram = { href = "https://t.me/dgrid_ai", target = "_blank", icon = "paper-plane", title = "Telegram" }
+medium = { href = "https://medium.com/@dgrid_ai", target = "_blank", icon = "logo-medium", title = "Medium" }
 github = { href = "https://github.com/dgridai/dgrid-blog", target = "_blank", icon = "logo-github", title = "GitHub" }
+email = { href = "mailto:hi@dgrid.ai", target = "_blank", icon = "mail", title = "Email" }
 
 [params.advanced]
 customCSS = ["css/custom.css"]

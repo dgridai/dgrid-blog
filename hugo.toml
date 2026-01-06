@@ -76,7 +76,7 @@ customSyntaxHighlighting = true
 
 # options
 stickyNav = true
-reorderNavItems = ["search", "x", "github", "email", "posts", "categories", "tags", "rss"]
+reorderNavItems = ["search", "x", "telegram", "medium", "github",  "email", "posts", "categories", "tags", "rss"]
 collapseNavItems = ["posts", "categories", "tags", "rss"]
 # noDefaultSummaryCover = true
 showTableOfContents = true
@@ -91,8 +91,11 @@ twitter = "dgrid_ai"
 
 [params.navItems]
 x = { href = "https://x.com/dgrid_ai", target = "_blank", icon = "logo-x", title = "X" }
+telegram = { href = "https://t.me/dgrid_ai", target = "_blank", icon = "paper-plane", title = "Telegram" }
+medium = { href = "https://medium.com/@dgrid_ai", target = "_blank", icon = "logo-medium", title = "Medium" }
 github = { href = "https://github.com/dgridai/dgrid-blog", target = "_blank", icon = "logo-github", title = "GitHub" }
 email = { href = "mailto:hi@dgrid.ai", target = "_blank", icon = "mail", title = "Email" }
+
 [params.advanced]
 customCSS = ["css/custom.css"]
 # customJS = []

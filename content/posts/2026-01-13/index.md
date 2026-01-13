@@ -43,7 +43,7 @@ DGrid RPC unlocks a new level of agility in building and using AI-powered applic
 
 Create your API key today at [https://dgrid.ai/api-keys](https://dgrid.ai/api-keys) and start building with the power of standardized, decentralized AI access.
 
-[](0_7lm9xv0uUxyPCJg-.webp)
+![](0_7lm9xv0uUxyPCJg-.webp)
 
 ## Conclusion
 

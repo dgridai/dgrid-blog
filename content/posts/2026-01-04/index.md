@@ -37,7 +37,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 1. Open your browser and navigate to the **DGrid console** (`https://dgrid.ai/api-keys`).
 2. Connect your wallet with your DGrid account.
 
-[](0_YfJ4zN6T5SQoAJls.webp)
+![](0_YfJ4zN6T5SQoAJls.webp)
 
 ### Navigate to the API Keys Section
 
@@ -45,7 +45,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 2. On the credits page, select ​**Keys**​.
 3. You should now see a list of existing API keys or an empty state if none exists.
 
-[](0_prGJ0yKb_Zyf0wez.webp)
+![](0_prGJ0yKb_Zyf0wez.webp)
 
 ### Create a New API Key
 
@@ -54,7 +54,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 3. (Optional but recommended) Enter the **credit limit** and/or ​**expiration date**​.
 4. Confirm by clicking ​**Create**​.
 
-[](0_VkG0-HOd_fwob8ux.webp)
+![](0_VkG0-HOd_fwob8ux.webp)
 
 ### Copy and Store the API Key Securely
 
@@ -62,7 +62,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 2. Click **“Copy”** and paste it into a **secure location** (e.g., password manager, secure note).
 3. **Do not share** this key publicly or commit it into version control systems like Git.
 
-[](0__etqzfphwauFAWOC.webp)
+![](0__etqzfphwauFAWOC.webp)
 
 > ***Important***
 > 
@@ -76,7 +76,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 2. In the ​**top-right corner**​, click the ​**Settings icon**​.
 3. On the Settings page, select the **Model Provider** tab.
 
-[](0_NIDPuXKDWwdCu9TW.webp)
+![](0_NIDPuXKDWwdCu9TW.webp)
 
 ### Add DGrid as a Custom Provider
 
@@ -86,7 +86,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 4. ​**Provider Type**​: Select `OpenAI` from the dropdown menu (DGrid is compatible with OpenAI’s API protocol).
 5. Click **OK** to save the basic provider configuration.
 
-[](0_o5ZizXE2LS2YRzzx.webp)
+![](0_o5ZizXE2LS2YRzzx.webp)
 
 ### Configure DGrid’s API Key and add some Models
 
@@ -97,7 +97,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 5. In the models configuration section, click the **+ Add** button. An “Add Model” pop-up will appear. Fill in the model details: (e.g., `gpt-3.5-turbo`, `gemini-pro` , etc).
 6. To edit or delete a model later, click the **Manage** button next to the model entry.
 
-[](0__-T-w_2P7szpwVmk.webp)
+![](0__-T-w_2P7szpwVmk.webp)
 
 ### Verify and Use DGrid Models in Cherry Studio
 
@@ -105,7 +105,7 @@ Before configuring any front‑end tool, you must obtain a valid **DGrid service
 2. Use the **Model Dropdown** to select your desired DGrid model (e.g., `gpt-3.5-turbo`).
 3. Type a test prompt (e.g., “Explain quantum computing in simple terms”) and click ​**Send**​. If the configuration is correct, DGrid’s model will return a response.
 
-[](0_apbSKhyoxazYXTtn.webp)
+![](0_apbSKhyoxazYXTtn.webp)
 
 ## Summary
 

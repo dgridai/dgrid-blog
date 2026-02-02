@@ -81,7 +81,7 @@ There are two main ways to earn points:
 **Referral Points by Inviting New Users**
 
 * Share DGrid AI Arena with others and earn Referral Points.
-* For each valid referred user, you receive 100 points.
+* For each valid referred user, you receive up to 100 points.
 * This lets you scale your rewards not just through your own participation, but also through the growth of the DGrid community you help bring in.
 
 Your total points are then used in two ways:

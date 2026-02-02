@@ -1,11 +1,13 @@
 ---
-title: 'Tutorial: Using DGrid RPC API with AnythingLLM'
-date: 2026-01-30T06:00:00+08:00
+title: 'Supercharging Openclaw with DGrid: The Ultimate AI Agent Setup'
+date: 2026-02-02T06:00:00+08:00
 author: DGrid AI
-cover: 0_yXBogBVjkm2drxL4.webp
+cover: 0_nfoqdmYYizVfJtke.webp
 images:
-  - 0_yXBogBVjkm2drxL4.webp
-description: "DGrid AI offers a smart, low-cost, and community-powered AI network, while AnythingLLM (developed by Mintplex Labs) is an all-in-one, no-code AI application that supports RAG, AI Agents, and private LLM deployments. This tutorial walks you through obtaining a DGrid API key and configuring it in AnythingLLM to leverage DGrid’s distributed AI models. "
+  - 0_nfoqdmYYizVfJtke.webp
+description: "OpenClaw has rapidly emerged as a leading consumer-grade platform for AI agent orchestration. It excels at connecting your digital life — calendars, emails, and notion workspaces — into a seamless, automated workflow. However, an agent is only as powerful as the model driving it.
+
+While Openclaw handles the tools, DGrid provides the intelligence. "
 categories:
   - AI
   - LLM
@@ -13,83 +15,145 @@ categories:
   - Web3
 ---
 
-## Introduction
+[OpenClaw](https://openclaw.ai/) has rapidly emerged as a leading consumer-grade platform for AI agent orchestration. It excels at connecting your digital life — calendars, emails, and notion workspaces — into a seamless, automated workflow. However, an agent is only as powerful as the model driving it.
 
-DGrid AI offers a smart, low-cost, and community-powered AI network, while AnythingLLM (developed by Mintplex Labs) is an all-in-one, no-code AI application that supports RAG, AI Agents, and private LLM deployments. This tutorial walks you through obtaining a DGrid API key and configuring it in AnythingLLM to leverage DGrid’s distributed AI models.
+While Openclaw handles the tools, DGrid provides the intelligence.
+
+By integrating DGrid, you bypass the heavy hardware requirements of running local models (like Ollama) while avoiding the high latency and costs of legacy providers. In this guide, we will show you how to inject DGrid’s high-performance API (powering 200+ models like OpenAI GPT and Gemini) directly into Openclaw, giving you a lightning-fast, reasoning-capable AI assistant on your desktop.
 
 ## Prerequisites
 
-* A Web3 wallet (required for DGrid account authentication, e.g., MetaMask).
-* An active AnythingLLM instance (self-hosted or cloud-deployed; refer to [AnythingLLM’s docs](https://docs.anythingllm.com/introduction) for setup guidance).
-* A secure password manager (to store your DGrid API key).
+Before we begin, ensure you have:
 
-## Step 1: Obtain Your DGrid API Key
+* ​**Terminal Access**​: `Terminal` (macOS/Linux) or `PowerShell` (Windows).
+* ​**DGrid API Key**​: Obtain your key from the DGrid dashboard([official guide](https://docs.dgrid.ai/AI-Gateway)).
+  - *Note: In the configuration steps below, replace ​* `sk-Your-DGridAI-Key`*​ ​with your actual key.*
+* ​**Node.js 22+** ​: Openclaw’s core functionality relies on Node.js, and it requires Node.js version 22 or higher. To check your current Node.js version, run the following command in your terminal: `node -v`
+  *- If your version is lower than 22, update Node.js to meet the requirement before proceeding.*
 
-To authenticate requests to DGrid’s AI network, you first need an API key. Follow these steps to generate and secure it:
+## Step 1: Installing Openclaw
 
-1. ​**Access the DGrid API Key Console**​: Open your browser and navigate to [https://dgrid.ai/api-keys](https://dgrid.ai/api-keys).
-2. ​**Authenticate with Your Wallet**​: Connect your Web3 wallet to log in. Ensure your wallet is connected to the correct network supported by DGrid.
-3. ​**Create a New API Key**​:
-   - Click ​**Create New Key**​.
-   - Enter a descriptive label (e.g., “AnythingLLM Integration”) to track the key’s purpose.
-   - (Optional but recommended) Set a credit limit or expiration date to control usage and reduce security risks.
-   - Click **Create** to generate the key.
-4. ​**Securely Store the Key**​: The API key will be displayed ​**only once**​. Copy it immediately and save it in a secure location (e.g., a password manager).
+First, we need to install the Openclaw core on your machine. This lightweight installation sets up the environment required to run your agents.
 
-### Critical Security Note
+For macOS and Linux: Copy and paste the following command into your terminal:
 
-Treat your DGrid API key like a password. Anyone with access to it can incur charges on your account or access sensitive data. Never share it publicly, commit it to version control (e.g., Git), or store it in unencrypted files.
+```
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
 
-## Step 2: Configure DGrid RPC in AnythingLLM
+For Windows (PowerShell): Open PowerShell as an Administrator and run:
 
-Since DGrid RPC is compatible with OpenAI’s RPC specifications, you can use AnythingLLM’s “Generic OpenAI” integration to connect to DGrid. Follow the exact steps below for successful configuration:
+```
+iwr -useb https://openclaw.ai/install.ps1 | iex
+```
 
-### ​**Launch AnythingLLM and Access Settings**​:
+*Wait for the installation to complete (this may take 1–2 minutes).*
 
-Open your AnythingLLM dashboard (local or cloud-based), log in to your account, and navigate to the homepage. Locate the wrench icon in the bottom-left corner — click it to enter the Settings menu.
+## Step 2: Injecting the DGrid Configuration
 
-### **Select the Correct LLM Provider**
+With Openclaw installed, configure it to communicate with DGrid’s servers by editing the `openclaw.json` configuration file.
 
-* In the Settings menu, find and select ​**AI Providers**​.
-* Within AI Providers, choose the **LLM** option.
-* Scroll to the bottom of the **LLM Provider** dropdown list and select ​**Generic OpenAI**​.
+**1. Open the Configuration File**
 
-![](0_F_1Ao10SZ6mt56p8.webp)
+Use the `nano` editor (or your preferred text editor) to open the config file:
 
-### ​**Input DGrid API Credentials and Customize Settings**​:
+```
+nano ~/.openclaw/openclaw.json
+```
 
-* ​**Base URL**​: Enter DGrid’s official API endpoint: [`https://api.dgrid.ai/api`](https://api.dgrid.ai/api)
-* ​**API Key**​: Paste the DGrid API key you generated in Step 1 (ensure no extra spaces are included).
-* ​**Chat Model Name**​: Customize this field (e.g., “DGrid-Llama-3–8B” or any name that helps you identify the DGrid model).
-* ​**Content Window Limit**​: Set a value based on your needs (this controls the maximum context window size for LLM interactions; refer to DGrid’s model documentation for recommended limits).
+**2. Add DGrid Credentials**
 
-![](0_VLLlEBZAQPS2xnib.webp)
+Add DGrid to the `models` section and set it as the default in the `agents` section.
 
-### ​**Save the Configuration**​:
+*Notes:*
 
-Click the **Save Changes** button to store your settings. AnythingLLM will now route all LLM requests through DGrid’s RPC endpoint.
+* If the file is empty: Paste the full code below.
+* If existing configs exist: Merge the keys (preserve other providers if needed, ensure JSON syntax is valid — no missing commas/brackets).
 
-## Step 3: Test the Integration
+Copy this updated configuration (optimized for GPT/Gemini):
 
-To confirm the setup works, test a simple query or RAG workflow in AnythingLLM:
+```
+{
+  "models": {
+    "providers": {
+      "DGrid": {
+        "baseUrl": "https://api.dgrid.ai/api/v1",
+        "apiKey": "sk-Your-DGridAI-Key",
+        "api": "openai-responses",
+        "models": [        // List all the models you want to use
+          {
+            "id": "openai/gpt-3.5-turbo",
+            "name": "GPT-3.5 Turbo",
+            "contextWindow": 16385,
+            "maxTokens": 4096
+          },
+          {
+            "id": "google/gemini-1.5-pro",
+            "name": "Gemini 1.5 Pro",
+            "contextWindow": 1048576,
+            "maxTokens": 20480
+          }
+        ]
+      }
+    }
+  },
+  
+  // Tell openclaw which model to use by default (format: provider/model ID)
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "dgrid/google/gemini-1.5-pro"
+      }
+    }
+  }
+}
+```
 
-1. ​**Create a New Workspace/Project**​: In AnythingLLM, start a new project (e.g., “DGrid Test”) and upload a sample document (for RAG) or skip to a direct chat.
-2. ​**Send a Test Query**​: Enter a prompt like, “Explain DGrid AI in 2 sentences.”
-3. ​**Verify the Response**​: Check if the response is generated successfully. You can further confirm via DGrid’s API usage dashboard (log back into [https://dgrid.ai/api-keys](https://dgrid.ai/api-keys) to view request logs and usage data).
+3. Save Changes
 
-## Troubleshooting Tips
+* Press `Ctrl + O` then `Enter` to save.
+* Press `Ctrl + X` to exit the editor.
 
-* ​**Authentication Errors**​: Ensure your Web3 wallet was correctly connected when generating the DGrid API key, and the key is pasted without extra spaces or typos.
-* ​**Connection Issues**​: Confirm the Base URL is exactly `https://api.dgrid.ai/api` and your network allows outbound requests to this endpoint (check firewalls or proxy settings if needed).
-* ​**Model Compatibility**​: If the LLM fails to generate responses, verify that your custom Chat Model Name aligns with a DGrid-supported model (refer to DGrid’s official documentation for a list of valid models).
-* ​**Save Failure**​: If changes aren’t saved, ensure all required fields (Base URL, API Key) are filled in — some versions of AnythingLLM mark these as mandatory for Generic OpenAI integration.
+> Pro Tip: We have `set dgrid/google/gemini-1.5-pro` as your primary model in the `agents` section. This ensures that by default, your Openclaw agents use Gemini's advanced reasoning capabilities for all tasks.
 
-## Conclusion
+## Step 3: Initialization and Onboarding
 
-By following the above steps, you’ve successfully integrated DGrid’s RPC API into AnythingLLM using the Generic OpenAI option. This setup combines DGrid’s decentralized, cost-effective AI network with AnythingLLM’s powerful no-code tools (RAG, AI Agents, private workspaces), making it ideal for teams and individuals seeking scalable, open AI solutions without complex infrastructure management.
+Now that the “brain” is configured, we need to wake up the “body.” We will run the Openclaw daemon and use the onboarding wizard to lock in our settings.
 
-For more details:
+Run the following command:
 
-* DGrid Documentation: [http://docs.dgrid.ai/](http://docs.dgrid.ai/)
-* AnythingLLM Documentation: [https://docs.anythingllm.com/](https://docs.anythingllm.com/)
-* DGrid API Key Console: [https://dgrid.ai/api-keys](https://dgrid.ai/api-keys)
+```
+openclaw onboard --install-daemon
+```
+
+**The Setup Wizard**
+
+The system will prompt you for several configurations. To ensure DGrid is prioritized, select the following options:
+
+1. Onboard mode: Select `QuickStart`.
+2. Config handling: CRITICAL — Select `Use existing values`.
+   - *Reasoning: This tells Openclaw to respect the JSON file we just edited.*
+3. Model/auth Provider: Select `Skip for now`.
+4. Filter models by provider: Type or Select `DGrid`.
+5. Default model: Select `Keep Current`.
+   - *Reasoning: This confirms the gemini-1.5-pro default we set in the JSON.*
+
+*Note: You may be asked to install plugins (Skills). For the first run, we recommend skipping these to ensure the connection is stable before adding complexity.*
+
+## Step 4: Verification
+
+Your Openclaw instance is now running and powered by DGrid (using Gemini 1.5 Pro by default)!
+
+### Verify the Connection
+
+To confirm everything works:
+
+1. Open the Openclaw interface.
+2. Send a simple query (e.g., “Hello, confirm you’re Gemini 1.5 Pro”).
+3. Check the response — Openclaw will confirm it’s using the configured model.
+
+## Support
+
+If you encounter any issues with API keys or model usage, please visit the [DGrid dashboard](https://dgrid.ai/api-keys) or [contact our support team](mailto:hi@dgrid.ai).
+
+*Thank you for choosing DGrid. Happy coding!*

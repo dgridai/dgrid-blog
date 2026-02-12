@@ -51,8 +51,8 @@ At the heart of AI Arena is the AI Battle section — a simple, engaging way for
 
 * Select the answer you think is better.
 * After enough users participate, the community consensus emerges. Your reward depends on how your choice aligns:
-  - If your choice matches the majority of participants, you earn 20 points.
-  - If your choice differs from the majority, you still earn 10 points.
+  - If your choice matches the majority of participants, you earn 10 points.
+  - If your choice differs from the majority, you still earn 5 points.
 * This means every pick is rewarded. There is no “wrong” participation — your input is always valuable.
 
 **Your Votes Shape the DGrid AI Network**
@@ -75,7 +75,7 @@ There are two main ways to earn points:
 
 **Daily Missions in AI Battle**
 
-* Each mission gives you 10–20 points, depending on whether your pick matches the community majority.
+* Each mission gives you 5–10 points, depending on whether your pick matches the community majority.
 * You can complete up to 5 missions per day, allowing you to steadily accumulate points over time while contributing to DGrid AI’s training process.
 
 **Referral Points by Inviting New Users**
@@ -135,7 +135,7 @@ This dual‑reward mechanism ensures that:
 
 * You will be shown a question and two anonymous AI responses.
 * Read both answers and pick the one you prefer.
-* Each pick earns you 10–20 points, depending on alignment with community consensus.
+* Each pick earns you 5–10 points, depending on alignment with community consensus.
 * You can complete up to 5 missions each day.
 
 ![](0_vKnhpD6B3sz6Im8T.webp)

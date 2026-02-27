@@ -47,7 +47,7 @@ After obtaining your DGrid API key, proceed to configure it in Cursor by followi
 1. Launch the Cursor editor. Locate the **Settings** icon (represented by a gear symbol) in the top-right corner of the interface and click on it.
 2. In the settings menu, select **Models** to access the model configuration panel. Then, navigate to the**API Keys** section.
 3. Find the **Open AI API Key** option. Toggle the switch to enable it, and paste the API key you generated from DGrid into the corresponding input field.
-4. Enable the **Override OpenAI Base URL** option. Enter DGrid’s official RPC endpoint in the input box:`https://api.dgrid.ai/api`.
+4. Enable the **Override OpenAI Base URL** option. Enter DGrid’s official RPC endpoint in the input box:`https://api.dgrid.ai/api/v1`.
 5. Save the configuration changes. Some versions of Cursor may apply the settings automatically, but it is recommended to restart the editor to ensure the new configuration takes effect.
 
 ![](2_SJd0fdj09dfjKLDFk.PNG)
@@ -62,7 +62,7 @@ To verify that the DGrid RPC API is correctly configured and functional in Curso
 4. Send a test prompt to the AI assistant. For example, you can ask: “Write a function to calculate the factorial of a number in Python” or request code optimization for a specific snippet.
 5. Check the response: If the AI generates a valid response without errors, the DGrid RPC API is configured successfully. If you encounter errors (e.g., authentication failed, connection timeout), troubleshoot as follows:
    1. Verify that the API key is correctly pasted and has not expired.
-   2. Ensure the OpenAI Base URL is set to the correct DGrid endpoint: `https://api.dgrid.ai/api`.
+   2. Ensure the OpenAI Base URL is set to the correct DGrid endpoint: `https://api.dgrid.ai/api/v1`.
    3. Check your internet connection and confirm that DGrid’s services are operational (visit the DGrid status page for updates).
    4. Validate that your Web3 wallet is still authenticated with DGrid and that the API key has sufficient credits (if a credit limit was set).
 

@@ -120,7 +120,7 @@ endpoints:
   custom:
     - name: "DGrid"
       apiKey: "${DGRIDAI_KEY}"
-      baseURL: "https://api.dgrid.ai/api"
+      baseURL: "https://api.dgrid.ai/api/v1"
       models:
         default: ["gpt-3.5-turbo"]
         fetch: true

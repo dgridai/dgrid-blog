@@ -23,7 +23,7 @@ This guide systematically outlines the workflow for acquiring a DGrid API key an
 1. A Web3 wallet (e.g., MetaMask) for DGrid account authentication and API key generation.
 2. An active LobeChat instance (web-based via [lobechat.com](https://lobechat.com/), self-hosted, or desktop app — see [GitHub Deployment Guide](https://github.com/lobehub/lobe-chat#self-hosting) for setup).
 3. A secure credential management tool to store sensitive DGrid API credentials.
-4. Network access to DGrid’s infrastructure: [API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/api`).
+4. Network access to DGrid’s infrastructure: [API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/api/v1`).
 
 ## Acquire a DGrid API Key
 
@@ -69,7 +69,7 @@ Leverage DGrid’s OpenAI protocol compatibility to configure the service in Lob
 * Click **Open AI** to expand its configuration pane (inactive state by default).
 * Input the required DGrid credentials and endpoints:
   - ​**API Key**​: Paste the DGrid API key stored in your credential manager.
-  - ​**API Proxy URL**​: Specify DGrid’s official RPC endpoint: `https://api.dgrid.ai/api` .
+  - ​**API Proxy URL**​: Specify DGrid’s official RPC endpoint: `https://api.dgrid.ai/api/v1` .
 
 Activate the integration in the **top-right corner** of the configuration pane.
 

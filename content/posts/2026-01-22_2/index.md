@@ -44,7 +44,7 @@ Once Open WebUI is installed and running (see [Open WebUI Installation Guide](ht
 ### Prerequisites
 
 * Ensure Open WebUI is running.
-* Have your DGrid API key and the official DGrid RPC Base URL (`https://api.dgrid.ai/api`) ready.
+* Have your DGrid API key and the official DGrid RPC Base URL (`https://api.dgrid.ai/api/v1`) ready.
 
 ### Configuration Steps
 
@@ -53,7 +53,7 @@ Once Open WebUI is installed and running (see [Open WebUI Installation Guide](ht
 3. ​**Add a New Connection**​: Click the ➕ "Add New Connection" button to create a custom connection for DGrid.
 4. ​**Basic Connection Setup**​:
    - ​**Connection Type**​: Select "External".
-   - ​**URL**​: Enter DGrid’s OpenAI-compatible Base URL: `https://api.dgrid.ai/api`.
+   - ​**URL**​: Enter DGrid’s OpenAI-compatible Base URL: `https://api.dgrid.ai/api/v1`.
    - ​**API Key**​: Paste your secure DGrid API key (starts with `sk-`).
 5. ​**Save the Connection**​: Click the ✅ "Save" button to securely store your DGrid credentials. Open WebUI encrypts your API key to prevent unauthorized access.
 
@@ -62,7 +62,7 @@ Once Open WebUI is installed and running (see [Open WebUI Installation Guide](ht
 ### Troubleshooting Connection Issues
 
 * If the UI becomes unresponsive after saving, refer to Open WebUI’s [Model List Loading Issues](https://docs.openwebui.com/troubleshooting/) guide.
-* Ensure your DGrid API key is valid (check for expiration in the DGrid console) and the Base URL is correctly entered (`https://api.dgrid.ai/api`).
+* Ensure your DGrid API key is valid (check for expiration in the DGrid console) and the Base URL is correctly entered (`https://api.dgrid.ai/api/v1`).
 * For Docker deployments, verify that Open WebUI has network access to DGrid’s API (no firewall rules are blocking outbound requests).
 
 ## Step 3: Use DGrid Models in Open WebUI

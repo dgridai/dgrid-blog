@@ -85,7 +85,7 @@ Select 'Yes' to agree to the terms of use:
 
 2. The onboarding wizard will launch in your terminal. Follow these exact selections for a no-code setup:
 
-   | Wizard Prompt                 | Required Selection                  | Reasoning                                                                                     |
+| Wizard Prompt                 | Required Selection                  | Reasoning                                                                                     |
 | ------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Onboard mode                  | QuickStart                          | Uses the streamlined, default setup flow for fast onboarding                                  |
 | Config handling               | Use existing values                 | Retains default system settings (we will customize the model provider via the UI later)       |
@@ -134,7 +134,7 @@ This is the core no-code setup step. We will add DGrid as a model provider, conf
 
 1. In the **Providers** section of the Models tab, click the **Add Entry** button to open the configuration form
 2. Fill in the following fields *exactly* as shown below (these values are optimized for DGrid’s API):
-   | Field Name                          | Value to Enter                                                   |
+| Field Name                          | Value to Enter                                                   |
 | ------------------------------------- | ------------------------------------------------------------------ |
 | Name the Entry                      | `DGrid`                                                      |
 | Model Provider API Adapter          | `OpenAI Responses`                                           |
@@ -154,7 +154,7 @@ Now we will add the specific AI models you want to use from DGrid’s library of
 1. Click the **Add** button in the **Model Provider Model List ​**section
 2. Fill in the model configuration fields as follows:
    
-   | Field Name     | Value to Enter             |
+| Field Name     | Value to Enter             |
 | ---------------- | ---------------------------- |
 | API            | `OpenAI Responses`     |
 | Context Window | `400,000`              |
@@ -172,7 +172,7 @@ Now we will add the specific AI models you want to use from DGrid’s library of
 1. Again, under the **Model Provider Model List ​**section, click **Add**
 2. Fill in the model configuration fields as follows:
    
-   | Field Name     | Value to Enter                  |
+| Field Name     | Value to Enter                  |
 | ---------------- | --------------------------------- |
 | API            | `OpenAI Responses`          |
 | Context Window | `200,000`                   |

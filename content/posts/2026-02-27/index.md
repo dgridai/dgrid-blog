@@ -142,7 +142,7 @@ This is the core no-code setup step. We will add DGrid as a model provider, conf
 | Model Provider API Key              | Your full DGrid API Key (copied in Step 1, starts with`sk-`) |
 | Model Provider Auth Mode            | `api-key`                                                    |
 | Model Provider Authorization Header | True                                                         |
-| Model Provider Base URL             | `https://api.dgrid.ai/api`​`/v1`                              |
+| Model Provider Base URL             | `https://api.dgrid.ai/api/v1`                              |
    
    
 
@@ -172,7 +172,7 @@ Now we will add the specific AI models you want to use from DGrid’s library of
 
 1. Again, under the **Model Provider Model List ​**section, click **Add**
 2. Fill in the model configuration fields as follows:
-   
+
 | Field Name     | Value to Enter                  |
 | ---------------- | --------------------------------- |
 | API            | `OpenAI Responses`          |

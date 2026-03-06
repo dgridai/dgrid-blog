@@ -1,11 +1,11 @@
 ---
-title: 'Configuring and Utilizing DGrid RPC Service in LobeChat: A Full Guide'
+title: 'Access GPT, Claude, and Gemini in LobeChat with DGrid RPC'
 date: 2026-02-09T06:00:00+08:00
 author: DGrid AI
 cover: 0_NC60d1W40sZI-JaT.webp
 images:
   - 0_NC60d1W40sZI-JaT.webp
-description: "The integration of AI and Web3 is entering a deep integration phase. On one side, AI models and agents are emerging in an endless stream, with diverse capabilities covering multiple scenarios; on the other, countless developers and application scenarios are eager to access high-quality AI solutions. "
+description: "AI applications today often need to connect to multiple model providers such as OpenAI, Anthropic, and Google. Managing separate APIs, authentication systems, and billing pipelines can quickly become complex. "
 categories:
   - AI
   - LLM
@@ -21,22 +21,52 @@ This guide systematically outlines the workflow for acquiring a DGrid API key an
 ## Prerequisites
 
 1. A Web3 wallet (e.g., MetaMask) for DGrid account authentication and API key generation.
-2. An active LobeChat instance (web-based via [lobechat.com](https://lobechat.com/), self-hosted, or desktop app — see [GitHub Deployment Guide](https://github.com/lobehub/lobe-chat#self-hosting) for setup).
+2. An active LobeChat instance (web-based via [lobechat.com](https://lobechat.com/) , self-hosted, or desktop app — see [GitHub Deployment Guide](https://github.com/lobehub/lobe-chat#self-hosting) for setup).
 3. A secure credential management tool to store sensitive DGrid API credentials.
 4. Network access to DGrid’s infrastructure: [API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/api/v1`).
 
-## Acquire a DGrid API Key
+## What Is DGrid RPC?
+
+DGrid RPC is a **unified inference gateway** for decentralized AI.
+
+Instead of integrating with each provider separately, applications send requests to DGrid. The network then routes those requests to the appropriate model provider.
+
+The architecture looks like this:
+
+```
+AI Client (LobeChat)
+        │
+        ▼
+   DGrid RPC
+        │
+ ┌──────┼─────────────┐
+ ▼      ▼             ▼
+OpenAI  Anthropic     Google
+ GPT      Claude      Gemini
+```
+
+This design allows applications to switch between models without changing infrastructure.
+
+### Key Benefits
+
+* Access to **200+ AI models**
+* **OpenAI-compatible API format**
+* Decentralized model marketplace
+* Lower inference costs
+* Flexible model switching
+
+## Step 1: Get a DGrid API Key
 
 The API key generation process aligns with the procedure detailed in the AnythingLLM integration guide. For technical consistency, follow these critical steps:
 
-1. Navigate to the DGrid API Key Console ([https://dgrid.ai/api-keys](https://dgrid.ai/api-keys)).
+1. Navigate to the DGrid API Key Console ([https://dgrid.ai/api-keys](https://dgrid.ai/api-keys) ).
 2. Authenticate via your Web3 wallet.
 3. Generate a new API key:
 
-- Click **Create New Key** to initiate the generation process.
-- Assign a descriptive, context-rich label (e.g., “LobeChat-RPC”) to facilitate access control and audit logging.
-- Optional but recommended: Configure a credit limit or expiration timestamp to mitigate financial and security risks associated with unauthorized usage.
-- Confirm key creation by selecting ​**Create**​.
+* Click **Create New Key** to initiate the generation process.
+* Assign a descriptive, context-rich label (e.g., “LobeChat-RPC”) to facilitate access control and audit logging.
+* Optional but recommended: Configure a credit limit or expiration timestamp to mitigate financial and security risks associated with unauthorized usage.
+* Confirm key creation by selecting ​**Create**​.
 
 4. Secure the API key immediately: The credential is displayed **only once** post-generation. Copy it to your secure credential manager — do not store it in plaintext, version control systems (e.g., Git), or shared environments.
 
@@ -44,9 +74,9 @@ The API key generation process aligns with the procedure detailed in the Anythin
 
 Treat DGrid API keys as sensitive authentication tokens. Unauthorized access may result in unauthorized charges, data breaches, or service misuse. Implement the following safeguards:
 
-- Restrict key access to authorized personnel only.
-- Avoid transmitting keys via unencrypted channels (e.g., email, instant messaging).
-- Regularly rotate keys (recommended every 90 days) via the DGrid API Console.
+* Restrict key access to authorized personnel only.
+* Avoid transmitting keys via unencrypted channels (e.g., email, instant messaging).
+* Regularly rotate keys (recommended every 90 days) via the DGrid API Console.
 
 ## Configuration of DGrid RPC in LobeChat
 
@@ -54,7 +84,7 @@ Leverage DGrid’s OpenAI protocol compatibility to configure the service in Lob
 
 **Access LobeChat and Authenticate:**
 
-* Launch a web browser and navigate to the LobeChat official website: [https://lobechat.com/](https://lobechat.com/).
+* Launch a web browser and navigate to the LobeChat official website: [https://lobechat.com/](https://lobechat.com/) .
 * Select **Get Started** to initiate the authentication process. Use a supported identity provider to log in to your LobeChat account.
 
 **Navigate to AI Service Provider Settings:**
@@ -68,12 +98,94 @@ Leverage DGrid’s OpenAI protocol compatibility to configure the service in Lob
 * On the AI Service Provider page, scroll to the **Disabled Providers** section and locate the **Open AI** option.
 * Click **Open AI** to expand its configuration pane (inactive state by default).
 * Input the required DGrid credentials and endpoints:
-  - ​**API Key**​: Paste the DGrid API key stored in your credential manager.
-  - ​**API Proxy URL**​: Specify DGrid’s official RPC endpoint: `https://api.dgrid.ai/api/v1` .
+  * ​**API Key**​: Paste the DGrid API key stored in your credential manager.
+  * ​**API Proxy URL**​: Specify DGrid’s official RPC endpoint: `https://api.dgrid.ai/api/v1` .
 
 Activate the integration in the **top-right corner** of the configuration pane.
 
 ![](0_PBB1BsjI6j-MSWZi.webp)
+
+### Important: OpenAI-Compatible Does NOT Mean OpenAI Only
+
+DGrid RPC uses an ​**OpenAI-compatible API format**​. This means most AI clients can connect immediately without custom integrations. However, ​**OpenAI-compatible does not mean OpenAI-only**​. The API format simply defines the ​**request structure**​, not the model provider. For example, the following models can all be used through the same endpoint:
+
+| Model Provider | Example Models                                           |
+| ---------------- | ---------------------------------------------------------- |
+| OpenAI         | gpt-4o, gpt-3.5-turbo                                    |
+| Anthropic      | claude-3-opus, claude-3-sonnet, claude-3-haiku |
+| Google         | gemini-pro                                               |
+| Mistral        | mistral-large                                            |
+| Open Source    | llama-3-70b                                              |
+
+All requests go through the same API endpoint:
+
+```
+https://api.dgrid.ai/api/v1
+```
+
+The only thing that changes is the ​**model name**​.
+
+## Troubleshooting
+
+### Claude Models Not Appearing in LobeChat
+
+Some AI clients only list predefined OpenAI models.
+
+If Claude models do not appear:
+
+1. Look for **Custom Model**
+2. Enter the model name manually
+3. Search and enter model information (including context window and standard output limit).
+
+Example:
+
+```
+Model ID: claude-3-sonnet
+Model Display Name: claude 3 sonnet
+Maximum Context Window: 200k
+```
+
+Save the configuration and refresh.
+
+![](1_dkOpdioqoij93-dkap.png)
+
+### Connection Errors
+
+Verify the following:
+
+* API key is valid
+* Base URL is correct
+
+```
+https://api.dgrid.ai/api/v1
+```
+
+* Your network allows outbound requests
+
+## Why Use DGrid Instead of Direct Model APIs?
+
+Traditional integrations require connecting to multiple providers individually.
+
+Example:
+
+| Provider  | Endpoint                    |
+| ----------- | ----------------------------- |
+| OpenAI    | api.openai.com              |
+| Anthropic | api.anthropic.com           |
+| Google    | generativeai.googleapis.com |
+
+DGrid simplifies this into a single endpoint:
+
+```
+DGrid RPC → Multiple AI Providers
+```
+
+Benefits include:
+
+* simpler integration
+* multi-model flexibility
+* cost optimization
+* decentralized inference infrastructure
 
 ## Conclusion
 

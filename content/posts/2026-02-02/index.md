@@ -77,7 +77,7 @@ Copy this updated configuration (optimized for GPT/Gemini):
   "models": {
     "providers": {
       "DGrid": {
-        "baseUrl": "https://api.dgrid.ai/api/v1",
+        "baseUrl": "https://api.dgrid.ai/v1",
         "apiKey": "sk-Your-DGridAI-Key",
         "api": "openai-responses",
         "models": [        // List all the models you want to use

@@ -58,7 +58,7 @@ Open your AnythingLLM dashboard (local or cloud-based), log in to your account, 
 
 ### ​**Input DGrid API Credentials and Customize Settings**​:
 
-* ​**Base URL**​: Enter DGrid’s official API endpoint: [`https://api.dgrid.ai/api/v1`](https://api.dgrid.ai/api)
+* ​**Base URL**​: Enter DGrid’s official API endpoint: [`https://api.dgrid.ai/v1`](https://api.dgrid.ai/api)
 * ​**API Key**​: Paste the DGrid API key you generated in Step 1 (ensure no extra spaces are included).
 * ​**Chat Model Name**​: Customize this field (e.g., “DGrid-Llama-3–8B” or any name that helps you identify the DGrid model).
 * ​**Content Window Limit**​: Set a value based on your needs (this controls the maximum context window size for LLM interactions; refer to DGrid’s model documentation for recommended limits).
@@ -80,7 +80,7 @@ To confirm the setup works, test a simple query or RAG workflow in AnythingLLM:
 ## Troubleshooting Tips
 
 * ​**Authentication Errors**​: Ensure your Web3 wallet was correctly connected when generating the DGrid API key, and the key is pasted without extra spaces or typos.
-* ​**Connection Issues**​: Confirm the Base URL is exactly `https://api.dgrid.ai/api/v1` and your network allows outbound requests to this endpoint (check firewalls or proxy settings if needed).
+* ​**Connection Issues**​: Confirm the Base URL is exactly `https://api.dgrid.ai/v1` and your network allows outbound requests to this endpoint (check firewalls or proxy settings if needed).
 * ​**Model Compatibility**​: If the LLM fails to generate responses, verify that your custom Chat Model Name aligns with a DGrid-supported model (refer to DGrid’s official documentation for a list of valid models).
 * ​**Save Failure**​: If changes aren’t saved, ensure all required fields (Base URL, API Key) are filled in — some versions of AnythingLLM mark these as mandatory for Generic OpenAI integration.
 

@@ -21,7 +21,7 @@ This guide walks you through the full process of integrating DGrid RPC — a uni
 
 1. A Web3 wallet (e.g., MetaMask) for DGrid account authentication and API key generation.
 2. The latest version of Chatbox installed (desktop app for Windows/macOS/Linux, or web version — see the [Chatbox official Guide](https://chatboxai.app/en/guide/getting-started/download)).
-3. Unrestricted network access to DGrid’s infrastructure: the [DGrid API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/api/v1`).
+3. Unrestricted network access to DGrid’s infrastructure: the [DGrid API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/v1`).
 
 ## What Is DGrid RPC?
 
@@ -94,7 +94,7 @@ Fill in the right-hand configuration panel with the following DGrid RPC specific
 1. ​**Name**​: Replace the default "Untitled" value with a descriptive name (e.g., "Chatbox-DGrid") to easily identify the provider in your list.
 2. ​**API Mode**​: Open the dropdown menu and select ​**OpenAI API Compatible**​. This is a mandatory setting, as DGrid RPC uses an OpenAI-compatible interface for seamless Chatbox integration.
 3. ​**API Key**​: Paste the DGrid API key you generated in Step 1 into this field. Use the eye icon to verify the key is entered correctly with no typos.
-4. ​**API Host**​: Enter DGrid's official RPC endpoint URL exactly as: `https://api.dgrid.ai/api/v1`
+4. ​**API Host**​: Enter DGrid's official RPC endpoint URL exactly as: `https://api.dgrid.ai/v1`
 5. ​**API Path**​: Confirm the path is set to `/chat/completions` (the standard path for OpenAI-compatible chat completion requests, fully supported by DGrid's endpoint).
 
 ### Validate Your API Configuration
@@ -118,7 +118,7 @@ Once your configuration is validated, add the LLMs you want to access via DGrid 
 If the API check fails or you cannot send chat requests, verify these critical settings:
 
 * Your DGrid API key is valid, active, and has not been revoked or expired.
-* The API Host URL is entered exactly as `https://api.dgrid.ai/api/v1` (no trailing slashes, extra spaces, or typos).
+* The API Host URL is entered exactly as `https://api.dgrid.ai/v1` (no trailing slashes, extra spaces, or typos).
 * You have selected **OpenAI API Compatible** as the API Mode (incorrect API mode is the most common cause of integration failures).
 * Your network or VPN/proxy does not block outbound requests to DGrid's infrastructure.
 

@@ -16,21 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.dream-summary-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.dream-summary-description {
-  margin-top: 0.5rem;
-  color: hsl(var(--bc) / 0.8);
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 #disqus_thread iframe[src*='ads-iframe'] {
   display: none;
 }

@@ -1,11 +1,11 @@
 ---
-title: 'Step-by-Step Guide: Configure DGrid RPC in Chatbox'
-date: 2026-03-09T06:00:00+08:00
+title: 'Step-by-Step Guide: Configure DGrid RPC in AI as Workspace (AIaW)'
+date: 2026-03-10T06:00:00+08:00
 author: DGrid AI
-cover: 0_CmUQ-SP3z25cIMNa.webp
+cover: 0_PwGwkOXwc7DQ3Fd-.webp
 images:
-  - 0_CmUQ-SP3z25cIMNa.webp
-description: "Chatboxs a popular open-source, cross-platform AI chat client that enables users to integrate and switch between multiple large language model (LLM) providers in a unified interface. With support for adding customizable API endpoints, it delivers flexible AI chat workflows for both individual and enterprise users."
+  - 0_PwGwkOXwc7DQ3Fd-.webp
+description: "AI as Workspace (AIaW) is an open-source, AI-native productivity platform that unifies chat, document collaboration, and custom AI workflows into a single, extensible workspace. With robust support for custom model providers and native API integration, AIaW enables users to build fully customized AI work environments with their preferred inference providers."
 categories:
   - AI
   - LLM
@@ -13,140 +13,112 @@ categories:
   - Web3
 ---
 
-[Chatbox ](https://chatboxai.app/en/)is a popular open-source, cross-platform AI chat client that enables users to integrate and switch between multiple large language model (LLM) providers in a unified interface. With support for adding customizable API endpoints, it delivers flexible AI chat workflows for both individual and enterprise users.
+AI as Workspace (AIaW) is an open-source, AI-native productivity platform that unifies chat, document collaboration, and custom AI workflows into a single, extensible workspace. With robust support for custom model providers and native API integration, AIaW enables users to build fully customized AI work environments with their preferred inference providers.
 
-This guide walks you through the full process of integrating DGrid RPC — a unified decentralized AI inference gateway — into Chatbox, with step-by-step configuration instructions, security best practices, and troubleshooting guidance.
+This guide walks you through the end-to-end process of integrating **DGrid RPC** — a unified decentralized AI inference gateway — into AIaW. With this integration, you unlock access to 200+ state-of-the-art large language models (LLMs) via a single, consistent configuration, eliminating the need to set up and manage separate API credentials for every model provider.
 
-## What You Need Before You Start
+**Prerequisites**
 
-1. A Web3 wallet (e.g., MetaMask) for DGrid account authentication and API key generation.
-2. The latest version of Chatbox installed (desktop app for Windows/macOS/Linux, or web version — see the [Chatbox official Guide](https://chatboxai.app/en/guide/getting-started/download)).
-3. Unrestricted network access to DGrid’s infrastructure: the [DGrid API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/v1`).
+1. A running instance of AIaW. For self-hosting guidance, refer to the [official AIaW documentation](https://docs.aiaw.app/self-host/).
+2. A Web3 wallet (e.g., MetaMask) to authenticate with the DGrid platform and generate your API key.
+3. A valid DGrid API key (generated via the [DGrid API Key Console](https://dgrid.ai/api-keys)).
+4. Unrestricted network access to DGrid's official API endpoint (`https://api.dgrid.ai/v1`) .
 
-## What Is DGrid RPC?
+## Step 1: Generate Your DGrid API Key
 
-DGrid RPC is a ​**unified inference gateway for decentralized AI**​. Instead of integrating separate API endpoints, credentials, and configurations for each LLM provider, your AI client sends all requests to DGrid RPC. The network automatically routes requests to the appropriate model provider, with no additional infrastructure changes required.
-
-Core architecture:
-
-```Plain
-AI Client (Chatbox)
-        │
-        ▼
- DGrid RPC
-        │
- ┌──────┼─────────────┐
- ▼      ▼             ▼
-OpenAI Anthropic  Google DeepMind
- GPT    Claude      Gemini
-```
-
-### Key Benefits
-
-* Access to **200+ state-of-the-art AI models** via a single integration
-* Native **OpenAI-compatible API format** for seamless client integration
-* Decentralized model marketplace and inference infrastructure
-* Optimized, lower inference costs compared to direct provider APIs
-* Zero-downtime model switching with no client-side configuration changes
-
-## Step 1: Create a DGrid API Key
-
-Before configuring Chatbox, you must generate a secure DGrid API key for authentication.
+Before configuring AIaW, you must first create a secure API key for DGrid RPC authentication.
 
 1. Navigate to the [DGrid API Key Console](https://dgrid.ai/api-keys).
 2. Authenticate using your Web3 wallet (MetaMask is recommended for full compatibility).
-3. Generate a new API key:
-   1. Click **Create New Key** to initiate the generation process.
-   2. Assign a descriptive label (e.g., "Chatbox-RPC") to simplify access control and audit logging.
-   3. Optional but highly recommended: Configure a credit limit or expiration timestamp to mitigate financial and security risks from unauthorized usage.
-   4. Confirm creation by selecting ​**Create**​.
-4. Secure your API key immediately: The credential is displayed **only once** after generation. Copy it to your secure credential manager — never store it in plaintext, version control systems (e.g., Git), or unencrypted shared environments.
+3. Click **Create New Key** to generate a new API credential.
+4. Assign a descriptive label (e.g., "AIaW-Workspace") to simplify access management and usage tracking.
+5. Optional but highly recommended: Configure a usage credit limit or expiration date to mitigate risk from unauthorized key usage.
+6. Confirm and create the key. **Copy the key immediately to your secure credential manager** — it is only displayed once after generation, and cannot be retrieved later.
 
-**Critical Security Advisory**
+> Critical Security Note: Treat your DGrid API key as a sensitive authentication token. Never share it, store it in unencrypted files, or commit it to version control systems. Rotate your keys regularly via the DGrid console for maximum security.
 
-Treat your DGrid API key as a sensitive authentication token. Unauthorized access may result in unintended charges, data breaches, or service misuse. Implement these mandatory safeguards:
+## Step 2: Access AIaW's Custom Provider Settings
 
-* Restrict key access to only authorized personnel and use cases.
-* Never transmit keys via unencrypted channels (e.g., email, unsecure instant messaging).
-* Regularly rotate keys (recommended every 90 days) via the DGrid API Console.
+1. Launch your AIaW application.
+2. In the left-hand navigation bar, click the **Settings** tab (the gear icon at the bottom of the sidebar).
+3. On the right-hand side of the Settings panel, locate the **Custom Providers** section.
+4. Click **+ Create Provider** to open the Edit Provider configuration panel, where you will set up your DGrid RPC integration.
 
-## Step 2: Configure DGrid RPC in Chatbox
+![](0_gHVNdirVRhZmeszs.webp)
 
-Follow this step-by-step workflow to configure DGrid RPC in Chatbox:
+## Step 3: Configure Core DGrid RPC Provider Settings
 
-### Access the Model Provider Settings
+In the Edit Provider panel, complete the following fields to set up your DGrid RPC integration, aligned with the AIaW interface:
 
-1. Launch your Chatbox application.
-2. Open the Settings panel (via the gear icon in the UI, or the configured keyboard shortcut).
-3. In the left-hand navigation menu, select ​**Model Provider**​.
+1. ​**Name**​: Enter a clear, identifiable name for your provider (e.g., `DGrid-AIaW`). This name will appear in your provider list and workspace selection menus.
+2. ​**Fallback Provider**​: Open the dropdown menu and select ​**OpenAI Compatible**​. This is a mandatory setting, as it tells AIaW to use the OpenAI API specification to communicate with DGrid's endpoint.
+3. ​**API Address**​: Enter DGrid's official RPC endpoint exactly as shown below (this is a required field): `https://api.dgrid.ai/v1`
+4. ​**API Key**​: Paste the DGrid API key you generated in Step 1 into this field.
+5. ​**Icon (Optional)**​: Upload or select a custom icon to quickly identify the DGrid RPC provider in your AIaW interface.
 
-### Create a New Custom Provider
+![](0_51SwAQQNjL6fJCuR.webp)
 
-1. In the middle panel of the Model Provider page, scroll to the bottom of the provider list.
-2. Click the **+ Add** button. This creates a new untitled custom provider entry and opens the full configuration panel on the right.
+### Advanced: Subprovider Configuration (Optional)
 
-![](0_PyRg1NA3kXe9D85-.webp)
+AIaW supports adding subproviders to mix and match models from multiple sources. For most DGrid use cases, ​**no subproviders are required**​: DGrid already acts as a unified gateway for 200+ models, and the OpenAI Compatible fallback provider will handle all inference requests.
 
-### Complete Core Configuration Fields
+If you wish to combine other local or remote providers with DGrid, click **+ ADD SUBPROVIDER** to add additional model sources. DGrid will remain the fallback provider for any models not explicitly configured in your subproviders.
 
-Fill in the right-hand configuration panel with the following DGrid RPC specifications, in order:
+## Step 4: Configure Default & Common Models
 
-1. ​**Name**​: Replace the default "Untitled" value with a descriptive name (e.g., "Chatbox-DGrid") to easily identify the provider in your list.
-2. ​**API Mode**​: Open the dropdown menu and select ​**OpenAI API Compatible**​. This is a mandatory setting, as DGrid RPC uses an OpenAI-compatible interface for seamless Chatbox integration.
-3. ​**API Key**​: Paste the DGrid API key you generated in Step 1 into this field. Use the eye icon to verify the key is entered correctly with no typos.
-4. ​**API Host**​: Enter DGrid's official RPC endpoint URL exactly as: `https://api.dgrid.ai/v1`
-5. ​**API Path**​: Confirm the path is set to `/chat/completions` (the standard path for OpenAI-compatible chat completion requests, fully supported by DGrid's endpoint).
+Once your core provider is set up, configure your default and frequently used models to streamline your workflow in AIaW:
 
-### Validate Your API Configuration
+1. Return to the main **Settings** panel.
+2. ​**Set Default Provider**​: In the Default Provider section, open the Provider dropdown and select your newly created `DGrid-AIaW` custom provider. This sets DGrid as the default inference provider for all new workspaces.
+3. ​**Default Model**​: In the Model field, enter the exact model ID of your preferred default LLM (e.g., `gpt-5.1`, `claude-3.5-sonnet`, `gemini-2.5-pro`). All models supported by DGrid are compatible [here](https://dgrid.ai/models).
+4. ​**Common Models**​: In the Common Models section, add the model IDs of the LLMs you use most frequently (e.g., `gpt-5-mini`, `o4-mini`, `claude-opus-4-5-20251101`, `deepseek-reasoner`). These models will appear in your conversation interface for one-click switching, all routed through DGrid RPC.
+5. ​**Multimodal Capabilities (Optional)**​: For multimodal models (e.g., GPT-4o, Gemini 2.5 Pro), open the Multimodal Capabilities dropdown to configure vision and media support, matching the features supported by DGrid's inference network.
 
-Before adding models, verify your setup is working correctly: Click the **Check** button next to the API Key field. Chatbox will send a test request to the DGrid RPC endpoint to validate your credentials and connection.
+![](0_Hl7omd2bMRb3SdH0.webp)
 
-### Add Supported Models
+## Step 5: Validate & Test Your Configuration
 
-Once your configuration is validated, add the LLMs you want to access via DGrid RPC:
+1. Save all your configuration changes in the Settings panel.
+2. Return to the AIaW main dashboard and create a new ​**Workspace**​.
+3. In the workspace, confirm that `DGrid-AIaW` is selected as your active provider.
+4. Select one of your configured models and send a test prompt.
+5. If you receive a successful response from the model, your DGrid RPC integration is fully configured and ready for use.
 
-1. In the **Model** section of the configuration panel, click the **+ New** button.
-2. Enter the exact model ID of the LLM you want to use (e.g., `gpt-4o`, `claude-3.5-sonnet`, `gemini-1.5-pro`). DGrid supports 200+ models — see the [DGrid Models](https://dgrid.ai/models) for the full supported list.
-3. Repeat this process to add all models you wish to use.
+## Key Benefits of DGrid RPC + AIaW Integration
 
-![](0_4oat6ONUbZACqIzo.webp)
+| Traditional AIaW Provider Setup                                               | DGrid RPC Integration                                                     |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Separate API configuration, credentials, and billing for every model provider | Single, one-time configuration for 200+ leading LLMs                      |
+| Manual updates and credential rotation for each provider                      | Unified credential management and billing via the DGrid console           |
+| Limited model switching without reconfiguring providers                       | Seamless one-click model switching in AIaW, with no client-side changes   |
+| Higher, variable inference costs across multiple providers                    | Optimized, lower-cost inference via DGrid's decentralized routing network |
+| Siloed usage tracking across multiple platforms                               | Unified usage monitoring and cost management in one DGrid dashboard       |
 
 ## Troubleshooting
 
-### Connection Errors
+### Common Connection & Request Errors
 
-If the API check fails or you cannot send chat requests, verify these critical settings:
-
-* Your DGrid API key is valid, active, and has not been revoked or expired.
-* The API Host URL is entered exactly as `https://api.dgrid.ai/v1` (no trailing slashes, extra spaces, or typos).
-* You have selected **OpenAI API Compatible** as the API Mode (incorrect API mode is the most common cause of integration failures).
-* Your network or VPN/proxy does not block outbound requests to DGrid's infrastructure.
-
-### Models Not Appearing or Failing to Load
-
-* Confirm the model ID is entered exactly as listed on [DGrid's official model page](https://dgrid.ai/models).
-* Verify your DGrid API key has sufficient credits to access the selected model.
-* Restart Chatbox to refresh the provider configuration and model list.
-
-## Why Use DGrid RPC Instead of Direct Model APIs?
-
-Traditional LLM integration requires you to manage separate API endpoints, credentials, billing, and configurations for every model provider. DGrid RPC simplifies this into a single, unified setup for Chatbox.
-
-| Traditional Integration                          | DGrid RPC Integration                              |
-| -------------------------------------------------- | ---------------------------------------------------- |
-| Multiple unique endpoints for each provider      | Single unified endpoint for all supported models   |
-| Separate API keys and billing for every provider | One API key, unified billing and credit management |
-| Manual configuration updates for each provider   | One-time setup, with seamless access to new models |
-| Variable, often higher inference costs           | Optimized, lower costs via decentralized routing   |
+1. **API Connection Failed / Request Timeout**
+   1. Verify the **API Address** is entered exactly as `https://api.dgrid.ai/v1` (no trailing slashes, extra spaces, or typos).
+   2. Confirm your **Fallback Provider** is set to **OpenAI Compatible** — this is the most common cause of integration failures.
+   3. Check that your DGrid API key is valid, active, and not expired or revoked in the DGrid console.
+   4. Ensure your network, firewall, or VPN is not blocking outbound requests to DGrid's API endpoint.
+2. **Model Not Found / Unsupported Model Error**
+   1. Confirm the model ID is entered exactly as listed in the [official DGrid model documentation](https://docs.dgrid.ai/).
+   2. Verify your DGrid API key has sufficient credits and access permissions for the selected model.
+   3. Double-check the model ID for typos, case sensitivity, or formatting errors.
+3. **Provider Not Visible in Workspace**
+   1. Confirm you have saved all changes to your custom provider configuration.
+   2. Ensure you have selected `DGrid-AIaW` as your default provider in the Settings panel, or manually select it in the workspace's provider dropdown.
+   3. Restart the AIaW application to refresh the provider configuration cache.
 
 ## Conclusion
 
-Integrating DGrid's unified RPC service with Chatbox combines the best of both platforms: Chatbox's intuitive, cross-platform AI chat interface, and DGrid's open, low-cost, decentralized AI network. With a single configuration, you unlock access to 200+ leading LLMs, eliminating the hassle of managing multiple provider accounts and endpoints.
+Integrating DGrid RPC with AIaW combines the flexibility and customization of AIaW's AI-native workspace platform with the power of DGrid's unified, decentralized AI inference network. With a single configuration, you unlock access to the latest state-of-the-art LLMs, simplify your credential and billing management, and build a fully customizable AI workspace that scales with your needs.
 
-Whether you are an individual user exploring state-of-the-art AI models, a developer building custom workflows, or a team seeking a unified AI chat solution, this integration delivers a powerful, extensible, and cost-effective toolchain.
+For additional resources and support:
 
-For advanced configuration, full model lists, or technical support:
-
+* [Official AIaW Documentation](https://docs.aiaw.app/)
 * [DGrid Official Documentation](https://docs.dgrid.ai/)
-* [Chatbox Official Documentation](https://chatboxai.app/en/guide)
 * [DGrid API Key Console](https://dgrid.ai/api-keys)
+

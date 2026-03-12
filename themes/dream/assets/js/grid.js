@@ -5,6 +5,7 @@ function initGrid() {
     var msnry = new Masonry(grid, {
       itemSelector: '.dream-column'
     });
+    grid._dreamMasonry = msnry;
     if (grid.classList.contains('dream-grid-about')) {
       window.aboutMasonry = msnry;
     }
@@ -14,4 +15,13 @@ function initGrid() {
     });
   });
 }
+
+window.relayoutDreamGrid = function () {
+  document.querySelectorAll('.dream-grid').forEach(function (grid) {
+    if (grid._dreamMasonry) {
+      grid._dreamMasonry.layout();
+    }
+  });
+};
+
 initGrid();

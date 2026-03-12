@@ -22,25 +22,15 @@ By routing Claude Code requests through DGrid, developers and organizations can:
 * Control **API access and keys**
 * Reduce the impact of rate limits or network instability
 
-Architecture overview:
-
-```Plain
-Claude Code (CLI / IDE)
-        ↓
-     DGrid Gateway
-        ↓
-   Anthropic Claude API
-```
-
 This setup allows developers to keep using Claude Code normally while DGrid handles request routing and infrastructure-level optimizations.
 
-# Why Use DGrid with Claude Code?
+## Why Use DGrid with Claude Code?
 
 Claude Code works well with the native Anthropic API. However, teams and production environments often need additional reliability and usage control.
 
 DGrid acts as a **gateway layer** between Claude Code and the Anthropic API.
 
-## Improved API Reliability
+### Improved API Reliability
 
 Public APIs may occasionally experience:
 
@@ -56,7 +46,7 @@ DGrid improves reliability by providing:
 
 This helps keep ​**Claude Code sessions stable during long coding workflows**​.
 
-## Usage Control for Teams
+### Usage Control for Teams
 
 When multiple developers use Claude Code, API usage can grow quickly.
 
@@ -68,7 +58,7 @@ DGrid helps teams:
 
 This prevents unexpected cost spikes and keeps usage predictable.
 
-## Infrastructure Layer for AI Development
+### Infrastructure Layer for AI Development
 
 DGrid allows organizations to introduce an infrastructure layer between development tools and AI providers.
 
@@ -80,7 +70,7 @@ This enables:
 
 Developers still use Claude Code exactly the same way.
 
-# Architecture Overview
+## Architecture Overview
 
 When Claude Code is connected to DGrid, requests follow this path:
 
@@ -103,13 +93,13 @@ DGrid acts as a transparent proxy that can:
 
 This architecture allows organizations to adopt Claude Code without exposing direct Anthropic API keys across multiple environments.
 
-# Quick Start: Run Claude Code with DGrid (5-Minute Setup)
+## Quick Start: Run Claude Code with DGrid (5-Minute Setup)
 
 This setup usually takes ​**less than five minutes**​.
 
 Follow the steps below to connect Claude Code to DGrid.
 
-# Prerequisites
+**Prerequisites**
 
 Before starting, make sure you have:
 
@@ -118,11 +108,11 @@ Before starting, make sure you have:
 * **Node.js 18+** (for npm installation)
 * Basic familiarity with shell configuration (bash / zsh / fish)
 
-# Step 1 – Install or Update Claude Code
+## Step 1 – Install or Update Claude Code
 
 Choose your preferred installation method.
 
-## Native Install (Recommended)
+### Native Install (Recommended)
 
 macOS / Linux / WSL
 
@@ -136,7 +126,7 @@ Windows PowerShell
 irm https://claude.ai/install.ps1 | iex
 ```
 
-## npm Install
+### npm Install
 
 Requires Node.js 18+
 
@@ -144,7 +134,7 @@ Requires Node.js 18+
 npm install -g @anthropic-ai/claude-code
 ```
 
-# Step 2 – Configure Claude Code to Use DGrid
+## Step 2 – Configure Claude Code to Use DGrid
 
 Instead of connecting directly to Anthropic, configure Claude Code to send requests through the ​**DGrid gateway**​.
 
@@ -161,7 +151,7 @@ To route requests through DGrid:
 2. Use your **DGrid API key** as the authentication token
 3. Clear any existing Anthropic API key to avoid conflicts
 
-# Option A – Global Shell Environment (Recommended)
+## Option A – Global Shell Environment (Recommended)
 
 This method applies to all projects on your machine.
 
@@ -195,7 +185,7 @@ or
 source ~/.zshrc
 ```
 
-# Option B – Project-Level Configuration
+## Option B – Project-Level Configuration
 
 If you want DGrid routing to apply only to one project, use a Claude Code project config file.
 
@@ -217,7 +207,7 @@ Example configuration:
 }
 ```
 
-# Security Tip
+### Security Tip
 
 Never commit real API keys to version control.
 
@@ -226,7 +216,7 @@ You can protect secrets by:
 * adding `.claude/settings.local.json` to `.gitignore`
 * storing keys in environment variables
 
-# Step 3 – Start a Claude Code Session
+## Step 3 – Start a Claude Code Session
 
 Once configuration is complete, open your project directory and run:
 
@@ -249,7 +239,7 @@ Anthropic API
 
 All prompts, code generation, and refactoring requests will pass through DGrid.
 
-# Step 4 – Verify the Configuration
+## Step 4 – Verify the Configuration
 
 To confirm Claude Code is using DGrid, run the `/status` command inside Claude Code.
 
@@ -266,9 +256,9 @@ Anthropic base URL: https://api.dgrid.ai
 
 If the base URL shows the DGrid endpoint, the configuration is correct.
 
-# Troubleshooting
+## Troubleshooting
 
-## Claude Code still connects directly to Anthropic
+### Claude Code still connects directly to Anthropic
 
 Check that these variables are set correctly:
 
@@ -280,7 +270,7 @@ ANTHROPIC_API_KEY=""
 
 Then restart your terminal.
 
-## Authentication errors
+### Authentication errors
 
 Verify that:
 
@@ -288,11 +278,11 @@ Verify that:
 * environment variables are loaded
 * the shell profile was reloaded
 
-# Best Practices for Teams
+## Best Practices for Teams
 
 When multiple developers use Claude Code, consider these practices.
 
-## Use managed API access
+### Use managed API access
 
 Instead of distributing multiple Anthropic keys, route requests through DGrid.
 
@@ -302,7 +292,7 @@ Benefits include:
 * safer key management
 * better visibility into API usage
 
-## Monitor usage regularly
+### Monitor usage regularly
 
 Use the **DGrid dashboard** to track:
 
@@ -312,15 +302,15 @@ Use the **DGrid dashboard** to track:
 
 This helps maintain predictable AI infrastructure costs.
 
-# FAQ
+## FAQ
 
-## Does Claude Code support API gateways?
+### Does Claude Code support API gateways?
 
 Yes.
 
 Claude Code allows configuring a custom ​**Anthropic base URL**​, which enables routing requests through services like DGrid.
 
-## Does this change how Claude Code works?
+### Does this change how Claude Code works?
 
 No.
 
@@ -328,13 +318,13 @@ Developers continue using Claude Code normally.
 
 The only difference is where API requests are routed.
 
-## Can teams share one DGrid account?
+### Can teams share one DGrid account?
 
 Yes.
 
 DGrid supports team-level usage monitoring and API management, allowing multiple developers to use the same infrastructure layer safely.
 
-# Support
+## Support
 
 If you encounter any issues:
 

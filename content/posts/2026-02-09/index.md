@@ -1,5 +1,5 @@
 ---
-title: 'Access GPT, Claude, and Gemini in LobeChat with DGrid RPC'
+title: 'Access GPT, Claude, and Gemini in LobeChat with DGrid AI Gateway'
 date: 2026-02-09T06:00:00+08:00
 author: DGrid AI
 cover: 0_NC60d1W40sZI-JaT.webp
@@ -16,7 +16,7 @@ categories:
 
 LobeChat is an open-source, production-grade AI Agent Workspace (starred by 60k+ developers on GitHub) designed for seamless integration of large language models (LLMs), multi-modal interactions, and extensible workflows. Beyond core chat functionality, it offers a comprehensive ecosystem including Knowledge Base with RAG capabilities, one-click MCP (Model Context Protocol) plugin installation, a curated Agent Marketplace, desktop/mobile cross-device support, and self-hosting flexibility.
 
-This guide systematically outlines the workflow for acquiring a DGrid API key and implementing DGrid RPC service within LobeChat, with a focus on security best practices and technical validation.
+This guide systematically outlines the workflow for acquiring a DGrid API key and implementing DGrid AI Gateway service within LobeChat, with a focus on security best practices and technical validation.
 
 ## Prerequisites
 
@@ -25,9 +25,9 @@ This guide systematically outlines the workflow for acquiring a DGrid API key an
 3. A secure credential management tool to store sensitive DGrid API credentials.
 4. Network access to DGrid’s infrastructure: [API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/v1`).
 
-## What Is DGrid RPC?
+## What Is DGrid AI Gateway?
 
-DGrid RPC is a **unified inference gateway** for decentralized AI.
+DGrid AI Gateway is a **unified inference gateway** for decentralized AI.
 
 Instead of integrating with each provider separately, applications send requests to DGrid. The network then routes those requests to the appropriate model provider.
 
@@ -37,7 +37,7 @@ The architecture looks like this:
 AI Client (LobeChat)
         │
         ▼
-   DGrid RPC
+   DGrid AI Gateway
         │
  ┌──────┼─────────────┐
  ▼      ▼             ▼
@@ -78,7 +78,7 @@ Treat DGrid API keys as sensitive authentication tokens. Unauthorized access may
 * Avoid transmitting keys via unencrypted channels (e.g., email, instant messaging).
 * Regularly rotate keys (recommended every 90 days) via the DGrid API Console.
 
-## Configuration of DGrid RPC in LobeChat
+## Configuration of DGrid AI Gateway in LobeChat
 
 Leverage DGrid’s OpenAI protocol compatibility to configure the service in LobeChat. Adhere to the step-by-step workflow below for optimal reliability:
 
@@ -107,7 +107,7 @@ Activate the integration in the **top-right corner** of the configuration pane.
 
 ### Important: OpenAI-Compatible Does NOT Mean OpenAI Only
 
-DGrid RPC uses an ​**OpenAI-compatible API format**​. This means most AI clients can connect immediately without custom integrations. However, ​**OpenAI-compatible does not mean OpenAI-only**​. The API format simply defines the ​**request structure**​, not the model provider. For example, the following models can all be used through the same endpoint:
+DGrid AI Gateway uses an ​**OpenAI-compatible API format**​. This means most AI clients can connect immediately without custom integrations. However, ​**OpenAI-compatible does not mean OpenAI-only**​. The API format simply defines the ​**request structure**​, not the model provider. For example, the following models can all be used through the same endpoint:
 
 | Model Provider | Example Models                                           |
 | ---------------- | ---------------------------------------------------------- |
@@ -177,7 +177,7 @@ Example:
 DGrid simplifies this into a single endpoint:
 
 ```
-DGrid RPC → Multiple AI Providers
+DGrid AI Gateway → Multiple AI Providers
 ```
 
 Benefits include:

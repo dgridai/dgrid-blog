@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Using DGrid RPC API with AnythingLLM'
+title: 'Tutorial: Using DGrid AI Gateway API with AnythingLLM'
 date: 2026-01-30T06:00:00+08:00
 author: DGrid AI
 cover: 0_yXBogBVjkm2drxL4.webp
@@ -40,9 +40,9 @@ To authenticate requests to DGrid’s AI network, you first need an API key. Fol
 
 Treat your DGrid API key like a password. Anyone with access to it can incur charges on your account or access sensitive data. Never share it publicly, commit it to version control (e.g., Git), or store it in unencrypted files.
 
-## Step 2: Configure DGrid RPC in AnythingLLM
+## Step 2: Configure DGrid AI Gateway in AnythingLLM
 
-Since DGrid RPC is compatible with OpenAI’s RPC specifications, you can use AnythingLLM’s “Generic OpenAI” integration to connect to DGrid. Follow the exact steps below for successful configuration:
+Since DGrid AI Gateway is compatible with OpenAI’s RPC specifications, you can use AnythingLLM’s “Generic OpenAI” integration to connect to DGrid. Follow the exact steps below for successful configuration:
 
 ### ​**Launch AnythingLLM and Access Settings**​:
 

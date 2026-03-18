@@ -1,5 +1,5 @@
 ---
-title: 'Step-by-Step Guide: Configure DGrid RPC in AI as Workspace (AIaW)'
+title: 'Step-by-Step Guide: Configure DGrid AI Gateway in AI as Workspace (AIaW)'
 date: 2026-03-10T06:00:00+08:00
 author: DGrid AI
 cover: 0_PwGwkOXwc7DQ3Fd-.webp
@@ -15,7 +15,7 @@ categories:
 
 AI as Workspace (AIaW) is an open-source, AI-native productivity platform that unifies chat, document collaboration, and custom AI workflows into a single, extensible workspace. With robust support for custom model providers and native API integration, AIaW enables users to build fully customized AI work environments with their preferred inference providers.
 
-This guide walks you through the end-to-end process of integrating **DGrid RPC** — a unified decentralized AI inference gateway — into AIaW. With this integration, you unlock access to 200+ state-of-the-art large language models (LLMs) via a single, consistent configuration, eliminating the need to set up and manage separate API credentials for every model provider.
+This guide walks you through the end-to-end process of integrating **DGrid AI Gateway** — a unified decentralized AI inference gateway — into AIaW. With this integration, you unlock access to 200+ state-of-the-art large language models (LLMs) via a single, consistent configuration, eliminating the need to set up and manage separate API credentials for every model provider.
 
 **Prerequisites**
 
@@ -26,7 +26,7 @@ This guide walks you through the end-to-end process of integrating **DGrid RPC**
 
 ## Step 1: Generate Your DGrid API Key
 
-Before configuring AIaW, you must first create a secure API key for DGrid RPC authentication.
+Before configuring AIaW, you must first create a secure API key for DGrid AI Gateway authentication.
 
 1. Navigate to the [DGrid API Key Console](https://dgrid.ai/api-keys).
 2. Authenticate using your Web3 wallet (MetaMask is recommended for full compatibility).
@@ -42,19 +42,19 @@ Before configuring AIaW, you must first create a secure API key for DGrid RPC au
 1. Launch your AIaW application.
 2. In the left-hand navigation bar, click the **Settings** tab (the gear icon at the bottom of the sidebar).
 3. On the right-hand side of the Settings panel, locate the **Custom Providers** section.
-4. Click **+ Create Provider** to open the Edit Provider configuration panel, where you will set up your DGrid RPC integration.
+4. Click **+ Create Provider** to open the Edit Provider configuration panel, where you will set up your DGrid AI Gateway integration.
 
 ![](0_gHVNdirVRhZmeszs.webp)
 
-## Step 3: Configure Core DGrid RPC Provider Settings
+## Step 3: Configure Core DGrid AI Gateway Provider Settings
 
-In the Edit Provider panel, complete the following fields to set up your DGrid RPC integration, aligned with the AIaW interface:
+In the Edit Provider panel, complete the following fields to set up your DGrid AI Gateway integration, aligned with the AIaW interface:
 
 1. ​**Name**​: Enter a clear, identifiable name for your provider (e.g., `DGrid-AIaW`). This name will appear in your provider list and workspace selection menus.
 2. ​**Fallback Provider**​: Open the dropdown menu and select ​**OpenAI Compatible**​. This is a mandatory setting, as it tells AIaW to use the OpenAI API specification to communicate with DGrid's endpoint.
 3. ​**API Address**​: Enter DGrid's official RPC endpoint exactly as shown below (this is a required field): `https://api.dgrid.ai/v1`
 4. ​**API Key**​: Paste the DGrid API key you generated in Step 1 into this field.
-5. ​**Icon (Optional)**​: Upload or select a custom icon to quickly identify the DGrid RPC provider in your AIaW interface.
+5. ​**Icon (Optional)**​: Upload or select a custom icon to quickly identify the DGrid AI Gateway provider in your AIaW interface.
 
 ![](0_51SwAQQNjL6fJCuR.webp)
 
@@ -71,7 +71,7 @@ Once your core provider is set up, configure your default and frequently used mo
 1. Return to the main **Settings** panel.
 2. ​**Set Default Provider**​: In the Default Provider section, open the Provider dropdown and select your newly created `DGrid-AIaW` custom provider. This sets DGrid as the default inference provider for all new workspaces.
 3. ​**Default Model**​: In the Model field, enter the exact model ID of your preferred default LLM (e.g., `gpt-5.1`, `claude-3.5-sonnet`, `gemini-2.5-pro`). All models supported by DGrid are compatible [here](https://dgrid.ai/models).
-4. ​**Common Models**​: In the Common Models section, add the model IDs of the LLMs you use most frequently (e.g., `gpt-5-mini`, `o4-mini`, `claude-opus-4-5-20251101`, `deepseek-reasoner`). These models will appear in your conversation interface for one-click switching, all routed through DGrid RPC.
+4. ​**Common Models**​: In the Common Models section, add the model IDs of the LLMs you use most frequently (e.g., `gpt-5-mini`, `o4-mini`, `claude-opus-4-5-20251101`, `deepseek-reasoner`). These models will appear in your conversation interface for one-click switching, all routed through DGrid AI Gateway.
 5. ​**Multimodal Capabilities (Optional)**​: For multimodal models (e.g., GPT-4o, Gemini 2.5 Pro), open the Multimodal Capabilities dropdown to configure vision and media support, matching the features supported by DGrid's inference network.
 
 ![](0_Hl7omd2bMRb3SdH0.webp)
@@ -82,11 +82,11 @@ Once your core provider is set up, configure your default and frequently used mo
 2. Return to the AIaW main dashboard and create a new ​**Workspace**​.
 3. In the workspace, confirm that `DGrid-AIaW` is selected as your active provider.
 4. Select one of your configured models and send a test prompt.
-5. If you receive a successful response from the model, your DGrid RPC integration is fully configured and ready for use.
+5. If you receive a successful response from the model, your DGrid AI Gateway integration is fully configured and ready for use.
 
-## Key Benefits of DGrid RPC + AIaW Integration
+## Key Benefits of DGrid AI Gateway + AIaW Integration
 
-| Traditional AIaW Provider Setup                                               | DGrid RPC Integration                                                     |
+| Traditional AIaW Provider Setup                                               | DGrid AI Gateway Integration                                                     |
 | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Separate API configuration, credentials, and billing for every model provider | Single, one-time configuration for 200+ leading LLMs                      |
 | Manual updates and credential rotation for each provider                      | Unified credential management and billing via the DGrid console           |
@@ -114,7 +114,7 @@ Once your core provider is set up, configure your default and frequently used mo
 
 ## Conclusion
 
-Integrating DGrid RPC with AIaW combines the flexibility and customization of AIaW's AI-native workspace platform with the power of DGrid's unified, decentralized AI inference network. With a single configuration, you unlock access to the latest state-of-the-art LLMs, simplify your credential and billing management, and build a fully customizable AI workspace that scales with your needs.
+Integrating DGrid AI Gateway with AIaW combines the flexibility and customization of AIaW's AI-native workspace platform with the power of DGrid's unified, decentralized AI inference network. With a single configuration, you unlock access to the latest state-of-the-art LLMs, simplify your credential and billing management, and build a fully customizable AI workspace that scales with your needs.
 
 For additional resources and support:
 

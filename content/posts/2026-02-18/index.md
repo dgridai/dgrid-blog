@@ -1,5 +1,5 @@
 ---
-title: 'How to Configure and Use DGrid RPC API in Cursor'
+title: 'How to Configure and Use DGrid AI Gateway API in Cursor'
 date: 2026-02-18T06:00:00+08:00
 author: DGrid AI
 cover: 2_9AdmDFNLnfdnfk.PNG
@@ -16,7 +16,7 @@ categories:
 
 Cursor is a powerful AI-driven code editor, designed specifically for developers to enhance coding efficiency with intelligent features such as real-time code completion, AI-assisted debugging, and seamless integration with various large language models (LLMs). It supports custom API integration, allowing developers to extend its capabilities by connecting to third-party model services.
 
-The primary purpose of this tutorial is to guide you through the process of configuring and using the DGrid RPC API in Cursor. By following these steps, you will be able to leverage DGrid's computing resources and model capabilities directly within the Cursor editor, unlocking more flexible and efficient AI-assisted coding workflows.
+The primary purpose of this tutorial is to guide you through the process of configuring and using the DGrid AI Gateway API in Cursor. By following these steps, you will be able to leverage DGrid's computing resources and model capabilities directly within the Cursor editor, unlocking more flexible and efficient AI-assisted coding workflows.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Follow these steps to generate and secure your DGrid API key:
    4. Confirm the key creation by clicking the **Create** button.
 4. Secure the API key immediately. **Important Note:** The API key is displayed only once after generation. Copy it to your secure credential manager immediately. Never store the key in plaintext, version control systems (e.g., Git), shared folders, or public environments to prevent unauthorized usage.
 
-## How to Configure DGrid RPC API in Cursor
+## How to Configure DGrid AI Gateway API in Cursor
 
 After obtaining your DGrid API key, proceed to configure it in Cursor by following these steps:
 
@@ -54,13 +54,13 @@ After obtaining your DGrid API key, proceed to configure it in Cursor by followi
 
 ## Test the Configuration
 
-To verify that the DGrid RPC API is correctly configured and functional in Cursor, perform the following test:
+To verify that the DGrid AI Gateway API is correctly configured and functional in Cursor, perform the following test:
 
 1. Restart Cursor to ensure all configuration changes are loaded.
 2. Create a new file (or open an existing project file) in Cursor. You can use any programming language file (e.g., .js, .py, .ts) for testing.
 3. Invoke Cursor’s AI assistant feature. You can do this by pressing the default shortcut `Ctrl+L` (Windows/Linux) or `Cmd+L` (macOS) to open the AI chat interface, or by using the AI code completion feature (start typing code and wait for suggestions).
 4. Send a test prompt to the AI assistant. For example, you can ask: “Write a function to calculate the factorial of a number in Python” or request code optimization for a specific snippet.
-5. Check the response: If the AI generates a valid response without errors, the DGrid RPC API is configured successfully. If you encounter errors (e.g., authentication failed, connection timeout), troubleshoot as follows:
+5. Check the response: If the AI generates a valid response without errors, the DGrid AI Gateway API is configured successfully. If you encounter errors (e.g., authentication failed, connection timeout), troubleshoot as follows:
    1. Verify that the API key is correctly pasted and has not expired.
    2. Ensure the OpenAI Base URL is set to the correct DGrid endpoint: `https://api.dgrid.ai/v1`.
    3. Check your internet connection and confirm that DGrid’s services are operational (visit the DGrid status page for updates).

@@ -48,7 +48,7 @@ We’re not starting from scratch. We’re building a bridge — between the AI 
 * **Decentralized Routing & Verification Network**
 * **LLM & Agent Free Market**
 * **DGrid Nodes: Decentralized Inference Execution**
-* **DGridRPC: Universal Access & Request Verification**
+* **DGrid AI Gateway: Universal Access & Request Verification**
 * **Proof of Quality (PoQ): Trust Guarantee for Inference Results**
 * **Billing Contracts & AI DA Layer: On-Chain Transparency**
 

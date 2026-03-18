@@ -1,5 +1,5 @@
 ---
-title: 'Step-by-Step Guide: OpenClaw Installation & DGrid AI RPC Service Setup(No Code Required)'
+title: 'Step-by-Step Guide: OpenClaw Installation & DGrid AI Gateway Service Setup(No Code Required)'
 date: 2026-02-27T06:00:00+08:00
 author: DGrid AI
 cover: 0_Hp_Yg8avi3N7lMTS.webp
@@ -118,7 +118,7 @@ If the UI asks for an authentication token:
 
 ![](0_76vNGXiAAQMbEoiB.webp)
 
-## Step 4: Configure DGrid AI RPC Service via Dashboard Control UI
+## Step 4: Configure DGrid AI Gateway Service via Dashboard Control UI
 
 This is the core no-code setup step. We will add DGrid as a model provider, configure your API credentials, and add supported models — all via point-and-click in the OpenClaw Control UI, with zero file editing.
 

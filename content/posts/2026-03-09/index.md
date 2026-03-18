@@ -1,5 +1,5 @@
 ---
-title: 'Step-by-Step Guide: Configure DGrid RPC in Chatbox'
+title: 'Step-by-Step Guide: Configure DGrid AI Gateway in Chatbox'
 date: 2026-03-09T06:00:00+08:00
 author: DGrid AI
 cover: 0_CmUQ-SP3z25cIMNa.webp
@@ -15,7 +15,7 @@ categories:
 
 [Chatbox ](https://chatboxai.app/en/)is a popular open-source, cross-platform AI chat client that enables users to integrate and switch between multiple large language model (LLM) providers in a unified interface. With support for adding customizable API endpoints, it delivers flexible AI chat workflows for both individual and enterprise users.
 
-This guide walks you through the full process of integrating DGrid RPC — a unified decentralized AI inference gateway — into Chatbox, with step-by-step configuration instructions, security best practices, and troubleshooting guidance.
+This guide walks you through the full process of integrating DGrid AI Gateway — a unified decentralized AI inference gateway — into Chatbox, with step-by-step configuration instructions, security best practices, and troubleshooting guidance.
 
 ## What You Need Before You Start
 
@@ -23,9 +23,9 @@ This guide walks you through the full process of integrating DGrid RPC — a uni
 2. The latest version of Chatbox installed (desktop app for Windows/macOS/Linux, or web version — see the [Chatbox official Guide](https://chatboxai.app/en/guide/getting-started/download)).
 3. Unrestricted network access to DGrid’s infrastructure: the [DGrid API Key Console](https://dgrid.ai/api-keys) and RPC endpoint (`https://api.dgrid.ai/v1`).
 
-## What Is DGrid RPC?
+## What Is DGrid AI Gateway?
 
-DGrid RPC is a ​**unified inference gateway for decentralized AI**​. Instead of integrating separate API endpoints, credentials, and configurations for each LLM provider, your AI client sends all requests to DGrid RPC. The network automatically routes requests to the appropriate model provider, with no additional infrastructure changes required.
+DGrid AI Gateway is a ​**unified inference gateway for decentralized AI**​. Instead of integrating separate API endpoints, credentials, and configurations for each LLM provider, your AI client sends all requests to DGrid AI Gateway. The network automatically routes requests to the appropriate model provider, with no additional infrastructure changes required.
 
 Core architecture:
 
@@ -33,7 +33,7 @@ Core architecture:
 AI Client (Chatbox)
         │
         ▼
- DGrid RPC
+ DGrid AI Gateway
         │
  ┌──────┼─────────────┐
  ▼      ▼             ▼
@@ -70,9 +70,9 @@ Treat your DGrid API key as a sensitive authentication token. Unauthorized acces
 * Never transmit keys via unencrypted channels (e.g., email, unsecure instant messaging).
 * Regularly rotate keys (recommended every 90 days) via the DGrid API Console.
 
-## Step 2: Configure DGrid RPC in Chatbox
+## Step 2: Configure DGrid AI Gateway in Chatbox
 
-Follow this step-by-step workflow to configure DGrid RPC in Chatbox:
+Follow this step-by-step workflow to configure DGrid AI Gateway in Chatbox:
 
 ### Access the Model Provider Settings
 
@@ -89,21 +89,21 @@ Follow this step-by-step workflow to configure DGrid RPC in Chatbox:
 
 ### Complete Core Configuration Fields
 
-Fill in the right-hand configuration panel with the following DGrid RPC specifications, in order:
+Fill in the right-hand configuration panel with the following DGrid AI Gateway specifications, in order:
 
 1. ​**Name**​: Replace the default "Untitled" value with a descriptive name (e.g., "Chatbox-DGrid") to easily identify the provider in your list.
-2. ​**API Mode**​: Open the dropdown menu and select ​**OpenAI API Compatible**​. This is a mandatory setting, as DGrid RPC uses an OpenAI-compatible interface for seamless Chatbox integration.
+2. ​**API Mode**​: Open the dropdown menu and select ​**OpenAI API Compatible**​. This is a mandatory setting, as DGrid AI Gateway uses an OpenAI-compatible interface for seamless Chatbox integration.
 3. ​**API Key**​: Paste the DGrid API key you generated in Step 1 into this field. Use the eye icon to verify the key is entered correctly with no typos.
 4. ​**API Host**​: Enter DGrid's official RPC endpoint URL exactly as: `https://api.dgrid.ai/v1`
 5. ​**API Path**​: Confirm the path is set to `/chat/completions` (the standard path for OpenAI-compatible chat completion requests, fully supported by DGrid's endpoint).
 
 ### Validate Your API Configuration
 
-Before adding models, verify your setup is working correctly: Click the **Check** button next to the API Key field. Chatbox will send a test request to the DGrid RPC endpoint to validate your credentials and connection.
+Before adding models, verify your setup is working correctly: Click the **Check** button next to the API Key field. Chatbox will send a test request to the DGrid AI Gateway endpoint to validate your credentials and connection.
 
 ### Add Supported Models
 
-Once your configuration is validated, add the LLMs you want to access via DGrid RPC:
+Once your configuration is validated, add the LLMs you want to access via DGrid AI Gateway:
 
 1. In the **Model** section of the configuration panel, click the **+ New** button.
 2. Enter the exact model ID of the LLM you want to use (e.g., `gpt-4o`, `claude-3.5-sonnet`, `gemini-1.5-pro`). DGrid supports 200+ models — see the [DGrid Models](https://dgrid.ai/models) for the full supported list.
@@ -128,11 +128,11 @@ If the API check fails or you cannot send chat requests, verify these critical s
 * Verify your DGrid API key has sufficient credits to access the selected model.
 * Restart Chatbox to refresh the provider configuration and model list.
 
-## Why Use DGrid RPC Instead of Direct Model APIs?
+## Why Use DGrid AI Gateway Instead of Direct Model APIs?
 
-Traditional LLM integration requires you to manage separate API endpoints, credentials, billing, and configurations for every model provider. DGrid RPC simplifies this into a single, unified setup for Chatbox.
+Traditional LLM integration requires you to manage separate API endpoints, credentials, billing, and configurations for every model provider. DGrid AI Gateway simplifies this into a single, unified setup for Chatbox.
 
-| Traditional Integration                          | DGrid RPC Integration                              |
+| Traditional Integration                          | DGrid AI Gateway Integration                              |
 | -------------------------------------------------- | ---------------------------------------------------- |
 | Multiple unique endpoints for each provider      | Single unified endpoint for all supported models   |
 | Separate API keys and billing for every provider | One API key, unified billing and credit management |

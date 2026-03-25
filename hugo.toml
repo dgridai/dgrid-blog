@@ -1,7 +1,7 @@
 baseURL = "https://blog.dgrid.ai"
 defaultContentLanguage = "en"
 languageCode = "en"
-title = "DGrid AI"
+title = "DGrid AI Blog"
 theme = "dream"
 
 enableGitInfo = true
@@ -47,10 +47,11 @@ darkTheme = "forest"
 images = ["img/global-background.jpg"]
 
 author = "DGrid AI"
-description = "The decentralized smart network of AI. For Open, Low-Cost, Community-Powered AI"
+description = "Explore the DGrid AI Blog for decentralized AI news, AI gateway tutorials, product updates, and insights on Web3 AI infrastructure."
+keywords = ["DGrid AI blog", "DGrid AI news", "decentralized AI", "AI gateway", "Web3 AI", "AI infrastructure", "LLM gateway", "AI API", "developer tutorials", "product updates"]
 avatar = "img/personal/avatar.png"
 headerTitle = "DGrid AI"
-motto = " The decentralized smart network of AI. For Open, Low-Cost, Community-Powered AI"
+motto = "Decentralized AI news, tutorials, and product updates from DGrid AI."
 
 footerBottomText = " "
 

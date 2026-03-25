@@ -1,0 +1,77 @@
+{{ define "title" }}Decentralized AI News, Tutorials & Product Updates{{ end }}
+
+{{ define "main"}}
+
+{{ $posts := (where site.RegularPages "Type" "posts").ByDate.Reverse }}
+
+{{ if site.Params.zenMode }}
+<div class="dream-zen-posts max-w-[65ch] mt-8 mx-auto px-4 space-y-8">
+{{ range $posts }}
+  <div class="js-load-more-item">
+  {{ .Render "zen-summary" }}
+  </div>
+{{ end }}
+</div>
+{{ else }}
+<div class="dream-grid opacity-0">
+  {{ range $posts }}
+    <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column js-load-more-item">
+      {{ .Render "summary" }}
+    </div>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="flex justify-center mt-8">
+  <button id="load-more-posts" class="btn btn-outline btn-sm hidden" type="button">Load more</button>
+</div>
+
+{{ end }}
+
+{{ define "js" }}
+
+{{ if site.Params.Experimental.jsDate }}
+{{ partial "luxon.html" . }}
+{{ end }}
+
+<script>
+  (function() {
+    const initialVisibleCount = 8;
+    const step = 8;
+    const items = Array.from(document.querySelectorAll('.js-load-more-item'));
+    const button = document.getElementById('load-more-posts');
+
+    if (!button || items.length <= initialVisibleCount) {
+      if (button) button.classList.add('hidden');
+      return;
+    }
+
+    let visibleCount = initialVisibleCount;
+    button.classList.remove('hidden');
+
+    function render() {
+      items.forEach(function(item, index) {
+        item.style.display = index < visibleCount ? '' : 'none';
+      });
+
+      if (visibleCount >= items.length) {
+        button.classList.add('hidden');
+      } else {
+        button.classList.remove('hidden');
+      }
+
+      if (typeof window.relayoutDreamGrid === 'function') {
+        window.relayoutDreamGrid();
+      }
+    }
+
+    button.addEventListener('click', function() {
+      visibleCount = Math.min(visibleCount + step, items.length);
+      render();
+    });
+
+    render();
+  })();
+</script>
+
+{{ end }}

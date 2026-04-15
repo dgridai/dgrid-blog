@@ -1,6 +1,6 @@
 ---
 title: 'Introducing DClaw: The 1-Click Agent Deployment Layer Powering the DGrid Ecosystem'
-date: 2026-04-13T06:00:00+08:00
+date: 2026-04-15T06:00:00+08:00
 author: DGrid AI
 cover: 1_wwfFUfZVr54klFml3pcxNA.webp
 images:

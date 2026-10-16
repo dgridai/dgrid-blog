@@ -4,7 +4,7 @@ date: 2026-10-16T06:00:00+08:00
 author: DGrid AI
 cover: 1_8rL5RA1AdwekwZhXFgfW7A.webp
 images:
-  - 1_QVVzy7OCiH7GysBR1rrqbA.webp
+  - 1_8rL5RA1AdwekwZhXFgfW7A.webp
 description: "DGrid is powering more always-on work across long-running tasks, high-frequency service calls, and team-based workflows. As more users rely on DGrid for work that needs to keep moving, reliability is no longer just about compute capacity. It also depends on the operational details that keep every task connected from start to finish."
 categories:
   - AI
